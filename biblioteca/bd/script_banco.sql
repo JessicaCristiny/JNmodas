@@ -11,3 +11,15 @@ senha varchar(20) not null,
 primary key (idcliente)
 );
 
+create database jnmodas;
+
+create table produto (
+        idProduto integer not null auto_increment,
+        nomeProduto varchar (20) not  null,
+        tamanho varchar (10) not null,
+        descricao varchar (30) not null,
+        preco varchar (10) not null,
+        quantidade varchar (10) not null,
+        primary key (idProduto)
+);
+
