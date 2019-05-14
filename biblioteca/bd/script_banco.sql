@@ -23,3 +23,13 @@ create table produto (
         primary key (idProduto)
 );
 
+create table enderecos (
+idendereco integer not null auto_increment,
+cidade varchar(20) not null,
+bairro varchar(20) not null,
+endereco varchar(40) not null,
+rua varchar(10) not null,
+cep varchar(20) not null,
+num varchar(20) not null,
+primary key (idendereco)
+);

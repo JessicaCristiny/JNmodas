@@ -1,4 +1,5 @@
 <?php
+require_once 'modelo/clienteModelo.php';
 function cadastro(){
     if (ehPost ()){
         $nome = strip_tags($_POST ["nome"]);
@@ -53,16 +54,8 @@ function cadastro(){
             echo  "Informe uma senha valida.<br>";
         }
 
-        
-        
-        
-        echo $nome ."<br>";
-        echo $email ."<br>";
-        echo $cpf ."<br>";
-        echo $cel ."<br>";
-        echo $senha ."<br>";
-        echo $data ."<br>";
-        
+        $msg = adicionarCliente($nome, $email, $cpf, $data, $cel, $senha);
+        echo $msg;
         
         //redirecionar("formulario/index");
     } else {
