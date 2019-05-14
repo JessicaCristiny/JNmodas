@@ -1,4 +1,5 @@
 <?php 
+    require_once "modelo/ProdutoModelo.php";
 function visualizar() {
     $vetor_dados = array();
     $vetor_dados ["nome"]= "Salto Feminino";
@@ -12,7 +13,7 @@ function adicionar(){
         $email =  strip_tags( $_POST ["email"]);
         $senha = strip_tags($_POST ["senha"]);
         
-    //nome
+    //nomeproduto
         if (strlen(trim($_POST['nome'])) == 0) {
             echo "Você deve inserir seu nome. <br>";
         }
@@ -39,10 +40,8 @@ function adicionar(){
             echo  "Informe uma senha valida.<br>";
         }
 
-        echo $nome ."<br>";
-        echo $email ."<br>";
-        echo $senha ."<br>" ;
-        
+         $msg = adicionarProduto($nomeProduto, $tamanho, $descricao, $preco, $quantidade);
+           echo $msg;
         
         //redirecionar("formulario/index");
     } else {
