@@ -6,3 +6,13 @@ function adicionarCliente($nomecompleto, $email, $cpf, $datanasci, $cel, $senha)
     return 'cliente cadastrado com sucesso!';
     
     }
+function pegarTodosClientes (){
+    $sql = "SELECT * FROM cliente";
+    $resultado = mysqli_query(conn(),$sql);
+    $clientes = array ();
+    while ($linha = mysqli_fetch_assoc($resultado)){
+        $clientes[]= $linha;
+    }
+    return $clientes;
+            
+}
