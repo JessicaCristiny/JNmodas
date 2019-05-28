@@ -2,8 +2,7 @@
         
         <table class =" table">
             <thead>
-                <tr> 
-                    <th>ID</th>
+                <tr>
                     <th>NOME PRODUTO</th>
                     <th>TAMANHO</th>
                     <th>DESCRICAO</th>

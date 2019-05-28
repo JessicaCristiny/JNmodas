@@ -12,7 +12,6 @@ function pegarTodosProdutos () {
     $produto = array ();
     while ($linha = mysqli_fetch_assoc($resultado)){
         $produtos [] = $linha;
-        
         return $produtos;
     }
 }

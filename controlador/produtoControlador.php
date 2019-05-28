@@ -10,8 +10,8 @@ function visualizar() {
 function adicionar(){
     if (ehPost ()){
         $nome = strip_tags($_POST ["nome"]);
-        $email =  strip_tags( $_POST ["descricao"]);
-        $senha = strip_tags($_POST ["valor"]);
+        $decricao =  strip_tags( $_POST ["descricao"]);
+        $valor = strip_tags($_POST ["valor"]);
         
     //nomeproduto
         if (strlen(trim($_POST['nome'])) == 0) {
