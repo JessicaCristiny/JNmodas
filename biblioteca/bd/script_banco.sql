@@ -33,3 +33,9 @@ cep varchar(20) not null,
 num varchar(20) not null,
 primary key (idendereco)
 );
+
+create table categoria (
+idcategoria integer not null auto_increment,
+descricao varchar (50) not null,
+primary key (idcategoria)
+);
