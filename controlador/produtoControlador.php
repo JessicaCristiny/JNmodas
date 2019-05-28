@@ -10,8 +10,8 @@ function visualizar() {
 function adicionar(){
     if (ehPost ()){
         $nome = strip_tags($_POST ["nome"]);
-        $email =  strip_tags( $_POST ["email"]);
-        $senha = strip_tags($_POST ["senha"]);
+        $email =  strip_tags( $_POST ["descricao"]);
+        $senha = strip_tags($_POST ["valor"]);
         
     //nomeproduto
         if (strlen(trim($_POST['nome'])) == 0) {
@@ -23,21 +23,21 @@ function adicionar(){
         }else{
             echo 'Não é do tipo String.';
         }   
-    //email    
-        if (strlen(trim($_POST['email'])) == 0) {
+        
+        if (strlen(trim($_POST['descricao'])) == 0) {
             echo "Você deve inserir um e-mail. <br>";
         }
-        $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
-        if ($email == FALSE) {
+        $descricao = filter_input(INPUT_POST, 'descricao', FILTER_VALIDATE_EMAIL);
+        if ($descricao == FALSE) {
             echo  "Informe um email valido.<br>";
         }
-    //senha
-         if (strlen(trim($_POST['senha'])) == 0) {
-            echo "Você deve inserir uma senha. <br>";
+    //
+         if (strlen(trim($_POST['valor'])) == 0) {
+            echo "Você deve colocar um valor. <br>";
         }
-        $senha = filter_input(INPUT_POST, 'senha', FILTER_VALIDATE_INT);
-        if ($senha == FALSE) {
-            echo  "Informe uma senha valida.<br>";
+        $valor = filter_input(INPUT_POST, 'valor', FILTER_VALIDATE_INT);
+        if ($valor == FALSE) {
+            echo  "Informe um valor.<br>";
         }
 
          $msg = adicionarProduto($nomeProduto, $tamanho, $descricao, $preco, $quantidade);
@@ -48,4 +48,9 @@ function adicionar(){
         exibir("produto/formulario");
     }
     
+}
+function listarProdutos () {
+    $dados = array();
+    $dados ["produtos"] = pegarTodosProdutos();
+    exibir ("produto/listar" , $dados);
 }
