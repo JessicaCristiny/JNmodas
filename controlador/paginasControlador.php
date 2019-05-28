@@ -1,10 +1,11 @@
 <?php
-
+require_once 'modelo/produtoModelo.php';
 /* CONTROLADOR
  * funçao: controlar as páginas estáticas (páginas sem acesso ao modelo)  */
 
 function index() {
-    exibir("paginas/inicial");
+    $dados ["produtos"] = pegarTodosProdutos();
+    exibir("paginas/inicial", $dados);
 }
 function sobre(){
     exibir("paginas/sobre");
@@ -12,5 +13,6 @@ function sobre(){
 function mapa(){
     exibir("paginas/mapa");
 }
+
 
 

@@ -1,3 +1,24 @@
 <h1>J & N Modas</h1>
 
-<P> Nosaa loja é sobre a venda de roupas estilosas para vocês</P>
+<P> Nossaa loja é sobre a venda de roupas estilosas para vocês</P>
+<table class =" table">
+    <thead>
+        <tr> 
+            <th>ID</th>
+            <th>NOME PRODUTO</th>
+            <th>TAMANHO</th>
+            <th>DESCRICAO</th>
+            <th>PRECO</th>
+            <th>QUANTIDADE</th>
+        </tr>
+    </thead>
+    <?php foreach ($produtos as $produto): ?>
+        <tr>
+            <td><?= $produto ['id'] ?></td>
+            <td><?= $produto['nome produto'] ?></td>
+            <td><?= $produto['tamanho'] ?></td>
+        </tr>
+    
+    <?php endforeach; ?>
+  
+</table>

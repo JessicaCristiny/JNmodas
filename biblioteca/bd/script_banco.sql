@@ -27,7 +27,6 @@ create table enderecos (
 idendereco integer not null auto_increment,
 cidade varchar(20) not null,
 bairro varchar(20) not null,
-endereco varchar(100) not null,
 rua varchar(100) not null,
 cep varchar(20) not null,
 num varchar(20) not null,
