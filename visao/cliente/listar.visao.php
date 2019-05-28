@@ -27,7 +27,7 @@
                 </tr>
                 <?php endforeach; ?>
             </table>    
-        <a href="./cliente/adicionar" class="btn btn-primary">Novo Cliente</a>
+        <a href="./cliente/cadastro" class="btn btn-primary">Novo Cliente</a>
        
     </body>
 </html>

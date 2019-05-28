@@ -14,9 +14,6 @@
 				<label for="email"><b>Bairro</b></label>
 				<input type="text" placeholder="Bairro" name="bairro" required="">
 				
-				<label for="email"><b>Endereço</b></label>
-				<input type="text" placeholder="Endereco" name="endereco" required="">
-
 				<label for="email"><b>Rua</b></label>
 				<input type="text" placeholder="Rua" name="rua" required="">
 				
@@ -24,7 +21,7 @@
 				<input type="text" placeholder="00000000" name="cep" required="">
 			
 				<label for="psw"><b>Numero</b></label>
-				<input type="password" placeholder="Num" name="num" required="">
+				<input type="text" placeholder="Numero" name="num" required="">
                                 
 			  <button type="submit" class="signupbtn">Confirmar</button>
 			

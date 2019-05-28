@@ -6,29 +6,28 @@
         <title></title>
     </head>
     <body>
-        <h2>Listar Clientes</h2>
+        <h2>Listar Endereços</h2>
         <table border = "1">
             <thead>
                 <tr>
-                    <th>Nome</th>
-                    <th>Email</th>
-                    <th>Cpf</th>
-                    <th>Data Nascimento</th>
-                    <th>Cel</th>
+                    <th>Cidade</th>
+                    <th>Bairro</th>
+                    <th>Rua</th>
+                    <th>Cep</th>
+                    <th>Num</th>
                 </tr>
             </thead>
-                <?php foreach ($clientes as $cliente): ?>
+                <?php foreach ($enderecos as $endereco): ?>
                 <tr>
-                    <td><?=$cliente['nomecompleto']?></td>
-                    <td><?=$cliente['email']?></td>
-                    <td><?=$cliente['cpf']?></td>
-                    <td><?=$cliente['datanasci']?></td>
-                    <td><?=$cliente['cel']?></td>
+                    <td><?=$endereco['cidade']?></td>
+                    <td><?=$endereco['bairro']?></td>
+                    <td><?=$endereco['rua']?></td>
+                    <td><?=$endereco['cep']?></td>
+                    <td><?=$endereco['num']?></td>
                 </tr>
                 <?php endforeach; ?>
             </table>    
-        <a href="./cliente/adicionar" class="btn btn-primary">Novo Cliente</a>
+        <a href="./endereco/cadastroE" class="btn btn-primary">Novo Endereço</a>
        
     </body>
 </html>
-//PRECISO ARRUMAAAR!!!!

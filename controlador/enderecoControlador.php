@@ -4,7 +4,6 @@ function cadastroE(){
     if (ehPost ()){
         $cidade = strip_tags($_POST ["cidade"]);
         $bairro = strip_tags($_POST ["bairro"]);
-        $endereco = strip_tags($_POST ["endereco"]);
         $rua = strip_tags($_POST ["rua"]);
         $cep = strip_tags($_POST ["cep"]);
         $num = strip_tags($_POST ["num"]);
@@ -30,16 +29,7 @@ function cadastroE(){
         }else{
             echo 'Não é do tipo String.';
         }
-    //endereco
-        if (strlen(trim($_POST['endereco'])) == 0) {
-            echo "Você deve inserir seu endereço. <br>";
-        }
- 
-        if(is_string($endereco)){
-
-        }else{
-            echo 'Não é do tipo String.';
-        }
+    
     //rua
         if (strlen(trim($_POST['rua'])) == 0) {
             echo "Você deve inserir sua rua. <br>";
@@ -81,5 +71,5 @@ function cadastroE(){
 function listarEnderecos(){
     $dados = array ();
     $dados ["enderecos"] = pegarTodosEnderecos();
-    exibir ("endereco/listar", $dados);
+    exibir ("endereco/listarE", $dados);
 }
