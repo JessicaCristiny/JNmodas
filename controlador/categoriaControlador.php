@@ -14,6 +14,12 @@
             }
             exibir ("categoria/formulario");
         }
-        ?>
+        
+        function listarCategoria () {
+            $dados = array ();
+            $dados ["categoria"] = pegarTodasCategoria();
+            exibir ("categoria/listar", $dados);
+        }
+?>
     
 
