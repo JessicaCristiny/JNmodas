@@ -54,3 +54,8 @@ function listarProdutos () {
     $dados ["produtos"] = pegarTodosProdutos();
     exibir ("produto/listar" , $dados);
 }
+
+function ver($id){
+    $dados ["produto"] = pegarTodosProdutoPorId($id);
+    exibir ("produto/visualizar",$dados);
+}

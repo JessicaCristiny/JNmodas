@@ -1,4 +1,6 @@
 <h1>Visualizar</h1>
-Nome: <?=$nome?><br>
-Descrição: <?=$descricao?><br>
-Valor: <?=$valor?><br>
+<p>Id: <?=$produto ['id']?></p>
+<p>Nome: <?=$produto['nome']?></p>
+<p>Descrição: <?=$produto['descricao']?></p>
+<p>Valor: <?=$produto['valor']?></p>
+

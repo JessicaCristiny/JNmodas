@@ -12,9 +12,10 @@
             </thead>
             <?php foreach ($produtos as $produto): ?>
             <tr>
-                <td><?=$produto ['id']?></td>
+                <td><?=$produto?></td>
                 <td><?=$produto['nome produto']?></td>
                 <td><?=$produto['tamanho']?></td>
+                <td><a href ="./produto/ver/<?=$produto['id']?>">Ver</a></td>
             </tr>
             <?php endforeach; ?>
         </table>

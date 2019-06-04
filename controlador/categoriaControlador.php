@@ -19,6 +19,11 @@
             $dados ["categoria"] = pegarTodasCategoria();
             exibir ("categoria/listar", $dados);
         }
+        
+        function ver($id){
+            $dados["categoria"] = pegarCategoriaPorId($id);
+            exibir("categoria/visualizar", $dados);
+        }
 ?>
     
 
