@@ -24,10 +24,11 @@
                     <td><?=$cliente['cpf']?></td>
                     <td><?=$cliente['datanasci']?></td>
                     <td><?=$cliente['cel']?></td>
+                    <td><a href="./cliente/ver/<?=$cliente['idcliente']?>">Ver</a></td>
                 </tr>
                 <?php endforeach; ?>
             </table>    
         <a href="./cliente/cadastro" class="btn btn-primary">Novo Cliente</a>
-       
+        
     </body>
 </html>

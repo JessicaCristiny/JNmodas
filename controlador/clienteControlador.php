@@ -68,3 +68,7 @@ function listarClientes(){
     $dados ["clientes"] = pegarTodosClientes();
     exibir ("cliente/listar", $dados);
 }
+function ver($id){
+    $dados["cliente"] = pegarClientePorId($id);
+    exibir("cliente/visualizar", $dados);
+}

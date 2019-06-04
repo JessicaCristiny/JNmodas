@@ -73,3 +73,7 @@ function listarEnderecos(){
     $dados ["enderecos"] = pegarTodosEnderecos();
     exibir ("endereco/listarE", $dados);
 }
+function ver($id){
+    $dados["endereco"] = pegarEnderecoPorId($id);
+    exibir("endereco/visualizar", $dados);
+}
