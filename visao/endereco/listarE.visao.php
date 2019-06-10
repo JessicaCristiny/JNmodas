@@ -24,6 +24,7 @@
                     <td><?=$endereco['rua']?></td>
                     <td><?=$endereco['cep']?></td>
                     <td><?=$endereco['num']?></td>
+                    <td><a href="./endereco/ver/<?=$endereco['idendereco']?>">Ver</a></td>
                 </tr>
                 <?php endforeach; ?>
             </table>    

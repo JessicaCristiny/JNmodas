@@ -16,3 +16,9 @@ function pegarTodosEnderecos (){
     return $enderecos;
             
 }
+function pegarEnderecoPorId ($id){
+    $sql = "select * from enderecos where idendereco = $id";
+    $resultado = mysqli_query(conn(), $sql);
+    $endereco = mysqli_fetch_assoc($resultado);
+    return $endereco;
+}
