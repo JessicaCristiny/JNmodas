@@ -14,6 +14,11 @@
             }
             return $categoria;
     }
-    
+    function pegarCategoriaPorId($id){
+        $sql = "SELECT * FROM categoria WHERE id=$id";
+        $resultado = mysqli_query(conn(),$sql);
+        $categoria = mysqli_fetch_assoc($resultado);
+        return categoria;
+    }
 ?>
     
