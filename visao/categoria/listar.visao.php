@@ -13,6 +13,7 @@
         <td><?=$categoria ['id categoria']?></td>
         <td><?=$categoria ['descricao']?></td>
         <td<a href="./categoria/ver/<?=$categoria['id']?>">Ver</a></td>
+        <td><a href ="./categoria/deletar/<?=$categoria['id']?>"Deletar</a></td>
     </tr>
     <?php endforeach; ?>
 </table>
