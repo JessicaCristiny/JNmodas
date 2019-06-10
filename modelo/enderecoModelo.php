@@ -22,3 +22,11 @@ function pegarEnderecoPorId ($id){
     $endereco = mysqli_fetch_assoc($resultado);
     return $endereco;
 }
+function deletarEndereco($id){
+    $sql = "delete from endereco where id = $id";
+    $resultado = mysqli_query($cnx = conn(), $sql);
+    if (!$resultado){
+        die('Erro ao deletar endereço'. mysqli_error($cnx));  
+    }
+    return 'Endereço deletado com sucesso!';
+}

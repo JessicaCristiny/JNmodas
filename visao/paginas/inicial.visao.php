@@ -1,6 +1,6 @@
 <h1>J & N Modas</h1>
 
-<P> Nossaa loja é sobre a venda de roupas estilosas para vocês</P>
+<P> Nossaa loja apresenta para vocês roupas estilosas que estão super na moda, para você abalar em seus looks e ainda sentir-se super confortável com nossas roupas.</P>
 <table class =" table">
     <thead>
         <tr> 

@@ -72,3 +72,7 @@ function ver($id){
     $dados["cliente"] = pegarClientePorId($id);
     exibir("cliente/visualizar", $dados);
 }
+function deletarCliente($id){
+    $msg = deletarCliente($id);
+    redirecionar('cliente/listar');
+}
