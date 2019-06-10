@@ -20,5 +20,12 @@
         $categoria = mysqli_fetch_assoc($resultado);
         return categoria;
     }
-?>
+    function deletarCategoria ($id){
+        $sql = "DELET FROM categoria WHERE id = $id";
+        $resultado = mysqli_query($cnx = conn(), $sql);
+        if (!$resultado) {
+            die ('Erro ao deletar categoria'. mysqli_error ($cnx));
+        }
+        return 'Categoria deletada com sucesso!';
+    }
     

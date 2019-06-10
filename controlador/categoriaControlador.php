@@ -24,6 +24,10 @@
             $dados["categoria"] = pegarCategoriaPorId($id);
             exibir("categoria/visualizar", $dados);
         }
+        function deletar ($id){
+            $msg = deletarCategoria($id);
+            redirecionar("categoria/listar");
+        }
 ?>
     
 

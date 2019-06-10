@@ -16,10 +16,11 @@
                 <td><?=$produto['nome produto']?></td>
                 <td><?=$produto['tamanho']?></td>
                 <td><a href ="./produto/ver/<?=$produto['id']?>">Ver</a></td>
+                <td><a href="./produto/deletar/<?=$produto['id']?>"Deletar</a></td>
             </tr>
             <?php endforeach; ?>
         </table>
-        <a cadastrar = "./produto/adicionar" class =" btn btn-primary">Novo produto</a>
+<a href =./produto/adicionar" class =" btn btn-primary">Novo produto</a>
 
 
 
