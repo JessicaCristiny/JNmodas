@@ -16,7 +16,7 @@
         
         function listarCategoria () {
             $dados = array ();
-            $dados ["categoria"] = pegarTodasCategoria();
+            $dados ["categorias"] = pegarTodasCategoria();
             exibir ("categoria/listar", $dados);
         }
         

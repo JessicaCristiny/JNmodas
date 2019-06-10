@@ -77,7 +77,7 @@ function ver($id){
     $dados["endereco"] = pegarEnderecoPorId($id);
     exibir("endereco/visualizar", $dados);
 }
-function deletarEndereco($id){
+function deletar($id){
     $msg = deletarEndereco($id);
     redirecionar("endereco/listar");
 }
