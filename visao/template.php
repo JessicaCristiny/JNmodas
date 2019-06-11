@@ -3,6 +3,7 @@
         <title>template MVC</title>
         <base href="<?= URL_BASE ?>"><!--Esta instrução é super importante e não deve ser mudada!-->
 
+        <meta charset="utf-8">
         <link rel="stylesheet" href="./publico/css/app.css">
     </head>
     <body class="container">
