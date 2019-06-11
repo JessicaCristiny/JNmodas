@@ -1,22 +1,21 @@
 <h1>J & N Modas</h1>
 
-<P> Nossa loja apresenta para vocês roupas estilosas que estão super na moda, para você abalar em seus looks e ainda sentir-se super confortável com nossas roupas.</P>
-<table class =" table">
+<P> Nossa loja é sobre a venda de roupas estilosas para vocês!</P>
+<table BORDER ="1">
     <thead>
         <tr> 
-            <th>ID</th>
-            <th>NOME PRODUTO</th>
-            <th>TAMANHO</th>
+            <th>NOME</th>
             <th>DESCRICAO</th>
-            <th>PRECO</th>
-            <th>QUANTIDADE</th>
+            <th>VALOR</th>
+
         </tr>
+
     </thead>
     <?php foreach ($produtos as $produto): ?>
         <tr>
-            <td><?= $produto ['id'] ?></td>
-            <td><?= $produto['nome produto'] ?></td>
-            <td><?= $produto['tamanho'] ?></td>
+            <td><?= $produto ['idProduto'] ?></td>
+            <td><?= $produto['nome'] ?></td>
+            <td><?= $produto['valor'] ?></td>
         </tr>
     
     <?php endforeach; ?>
