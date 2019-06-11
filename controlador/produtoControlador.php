@@ -44,7 +44,7 @@ function adicionar(){
         }
       
          $msg = adicionarProduto($nome, $descricao, $valor);
-           echo $msg;
+         redirecionar("produto/listarProdutos");
         
         //redirecionar("formulario/index");
     } else {
@@ -64,6 +64,6 @@ function ver($id){
 }
 function deletar ($id) {
     $msg = deletarProduto($id);
-    redirecionar("produto/listar");
+    redirecionar("produto/listarProdutos");
 }
 ?>

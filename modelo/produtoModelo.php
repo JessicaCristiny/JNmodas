@@ -25,7 +25,7 @@ function pegarProdutoPorId ($id){
     return $produto;
 }
 function deletarProduto ($id) {
-  $sql = "DELETE FROM produtos WHERE id = $id";
+  $sql = "DELETE FROM produto WHERE idProduto = $id";
   $resultado = mysqli_query($cnx =conn(), $sql);
   if (!$resultado) {
       die ('Erro ao deletar cliente' . mysqli_error($cnx)); 
