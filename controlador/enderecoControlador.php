@@ -60,8 +60,8 @@ function cadastroE(){
         }else{
             echo 'Não é do tipo String.';
         }
-    $msg = adicionarEndereco($cidade, $bairro, $endereco, $rua, $cep, $num);
-    echo $msg;    
+    $msg = adicionarEndereco($cidade, $bairro, $rua, $cep, $num);
+    redirecionar("endereco/listarEnderecos");   
         
     } else {
         exibir("endereco/cadastroE");
@@ -79,5 +79,5 @@ function ver($id){
 }
 function deletar($id){
     $msg = deletarEndereco($id);
-    redirecionar("endereco/listar");
+    redirecionar("endereco/listarEnderecos");
 }

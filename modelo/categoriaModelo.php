@@ -15,13 +15,13 @@
             return $categoria;
     }
     function pegarCategoriaPorId($id){
-        $sql = "SELECT * FROM categoria WHERE id=$id";
+        $sql = "SELECT * FROM categoria WHERE idcategoria =$id";
         $resultado = mysqli_query(conn(),$sql);
         $categoria = mysqli_fetch_assoc($resultado);
-        return categoria;
+        return $categoria;
     }
     function deletarCategoria ($id){
-        $sql = "DELET FROM categoria WHERE id = $id";
+        $sql = "DELETE FROM categoria WHERE idcategoria = $id";
         $resultado = mysqli_query($cnx = conn(), $sql);
         if (!$resultado) {
             die ('Erro ao deletar categoria'. mysqli_error ($cnx));

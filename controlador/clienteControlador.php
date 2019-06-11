@@ -55,9 +55,10 @@ function cadastro(){
         }
 
         $msg = adicionarCliente($nome, $email, $cpf, $data, $cel, $senha);
-        echo $msg;
+        redirecionar('cliente/listarClientes');
         
         //redirecionar("formulario/index");
+        
     } else {
         exibir("cliente/cadastro");
     }
@@ -74,5 +75,5 @@ function ver($id){
 }
 function deletar($id){
     $msg = deletarCliente($id);
-    redirecionar('cliente/listar');
+    redirecionar('cliente/listarClientes');
 }

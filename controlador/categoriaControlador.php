@@ -4,14 +4,14 @@
         function adicionar () {
             
             if (ehPost ()) {
-                $descricao = $_POST [descricao];
+                $descricao =strip_tags($_POST ["descricao"]);
     
                 $msg = adicionarCategoria ($descricao);
-                echo $msg;
+                redirecionar("categoria/listarCategoria");
             } else {
-                //aqui nao existem dados a serem submetidos!
+                exibir ("categoria/formulario");
             }
-            exibir ("categoria/formulario");
+            
         }
         
         function listarCategoria () {
@@ -26,7 +26,7 @@
         }
         function deletar ($id){
             $msg = deletarCategoria($id);
-            redirecionar("categoria/listar");
+            redirecionar("categoria/listarCategoria");
         }
 ?>
     

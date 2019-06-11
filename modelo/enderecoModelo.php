@@ -23,7 +23,7 @@ function pegarEnderecoPorId ($id){
     return $endereco;
 }
 function deletarEndereco($id){
-    $sql = "delete from endereco where id = $id";
+    $sql = "delete from enderecos where idendereco = $id";
     $resultado = mysqli_query($cnx = conn(), $sql);
     if (!$resultado){
         die('Erro ao deletar endereço'. mysqli_error($cnx));  
