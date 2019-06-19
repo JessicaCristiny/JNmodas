@@ -7,13 +7,14 @@
         <link rel="stylesheet" href="./publico/css/app.css">
     </head>
     <body class="container">
+        <table> 
     <tr>
         <td><a href="./cliente/listarClientes">Clientes</a></td>
         <td><a href="./produto/listarProdutos">Produtos</a></td>
         <td><a href="./endereco/listarEnderecos">Endereços</a></td>
         <td><a href="./categoria/listarCategoria">Categorias</a></td>
     </tr>
-
+        </table>
         <main class="container">
             <?php require $viewFilePath; ?>
         </main>
