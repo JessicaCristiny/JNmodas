@@ -14,7 +14,7 @@ primary key (idcliente)
 create table produto (
         idProduto integer not null auto_increment,
         nome varchar (20) not  null,
-        descricao varchar (30) not null,
+        descricao varchar (230) not null,
         valor varchar (10) not null,
         primary key (idProduto)
 );
