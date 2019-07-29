@@ -77,3 +77,18 @@ function deletar($id){
     $msg = deletarCliente($id);
     redirecionar('cliente/listarClientes');
 }
+function editar($id){
+    if (ehPost ()){
+        $nome = $_POST ["nome"];
+        $email = $_POST ["email"];
+        $cpf = $_POST ["cpf"];
+        $data = $_POST ["data"];
+        $cel = $_POST ["cel"];
+        $senha = $_POST ["senha"];
+        editarCliente($id, $nome, $email, $cpf, $data, $cel, $senha);
+        redirecionar("cliente/listarClientes");
+    }else {
+        $dados["cliente"] = pegarClientePorId($id);
+        exibir("cliente/cadastro", $dados);
+    }
+}
