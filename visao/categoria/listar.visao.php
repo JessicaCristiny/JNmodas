@@ -22,6 +22,7 @@
                 <td><?=$categoria['idcategoria']?></td>
                 <td><?=$categoria['descricao']?></td>
                 <td><a href="./categoria/ver/<?=$categoria['idcategoria']?>">Ver</a></td>
+                <td><a href ="./categoria/editar/<?=$categoria['id']?>">Alterar</a></td>
                 <td><a href ="./categoria/deletar/<?=$categoria['idcategoria']?>">Deletar</a></td>
             </tr>
             <?php endforeach; ?>

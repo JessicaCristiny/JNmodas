@@ -18,6 +18,7 @@
                 <td><?=$produto['valor']?></td>
                 <td><a href ="./produto/ver/<?=$produto['idProduto']?>">Ver</a></td>
                 <td><a href="./produto/deletar/<?=$produto['idProduto']?>">Deletar</a></td>
+                <td><a href="./produto/editar/<?=$produto['idProduto']?>">Alterar</a></td>
                 
             </tr>
             <?php endforeach; ?>

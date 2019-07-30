@@ -32,4 +32,12 @@ function deletarProduto ($id) {
   }
   return 'Produto deletado com sucesso!';
 }
+function editarProduto($idProduto, $nome, $descricao, $valor, $categoria) {
+    $sql = "UPDATE produto SET nome = '$nome', descricao = '$descricao' , valor = '$valor', categoria = '$categoria' WHERE id = $id";
+    $resultado = mysqli_query($cnx = conn(), $sql);
+    if (!$resultado) { die('Erro ao alterar produto' . mysqli_error($cnx));}
+    return 'Produto alterado com sucesso!';
+}
+
+
 

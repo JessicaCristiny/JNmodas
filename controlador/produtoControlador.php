@@ -66,4 +66,16 @@ function deletar ($id) {
     $msg = deletarProduto($id);
     redirecionar("produto/listarProdutos");
 }
-?>
+function editar ($id) {
+    if (ehPost()) {
+        $nome = $_POST ["nome"];
+        $descricao = $_POST ["descricao"];
+        $valor = $_POST ["valor"];
+        $categoria = $_POST ["categoria"];
+        editarCliente ($idProduto, $nome, $descricao, $valor, $categoria);
+        redirecionar ("produto/listar");
+        } else {
+            $dados ["produto"] = pegarProdutoPorId($id);
+            exibir("produto/formulario", $dados);
+            }
+}  
