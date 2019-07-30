@@ -1,4 +1,5 @@
 create database jnmodas;
+use jnmodas;
 
 create table cliente(
 idcliente integer not null auto_increment,
@@ -82,7 +83,7 @@ create table pedido_produto (
 idproduto int(11) auto_increment not null,
 idpedido int (11)  not null,
 quantidade int(11) not null,
-foreign key(idproduto) references produto(codigo) on delete cascade on update cascade,
+foreign key(idProduto) references produto(codigo) on delete cascade on update cascade,
 foreign key(idpedido) references produto(codigo) on delete cascade on update cascade
 );
 

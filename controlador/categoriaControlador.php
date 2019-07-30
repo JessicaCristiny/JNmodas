@@ -28,6 +28,17 @@
             $msg = deletarCategoria($id);
             redirecionar("categoria/listarCategoria");
         }
+        function editar ($id) {
+            if (ehPost()) {
+                $descricao = $_POST ["descricao"];
+                $idcategoria = $_POST ["idcategoria"];
+            editarCategoria ($id, $nome, $email);
+            redirecionar ("categoria/listar");
+            } else {
+                $dados ["categoria"] = pegarCategoriaPorId ($id);
+                exibir ("categoria/formulario", $dados);
+            }    
+        }
 ?>
     
 
