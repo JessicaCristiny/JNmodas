@@ -30,3 +30,10 @@ function deletarEndereco($id){
     }
     return 'Endereço deletado com sucesso!';
 }
+function editarEnderecos($idendereco, $cidade, $bairro, $rua, $cep, $num){
+    $sql = "update enderecos set idendereco = '$idendereco', cidade = '$cidade', bairro = '$bairro', rua = '$rua', cep = '$cep', num = '$num' where idendereco = $idendereco";
+    $resultado = mysqli_query($cnx = conn(), $sql);
+    if (!$resultado) { die('Erro ao alterar o endereço'. mysqli_error($cnx));}
+    return 'Endereço alterado com sucesso!';
+    
+}

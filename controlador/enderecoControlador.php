@@ -81,3 +81,18 @@ function deletar($id){
     $msg = deletarEndereco($id);
     redirecionar("endereco/listarEnderecos");
 }
+function editar($id) {
+    if (ehPost ()){
+        $cidade = $_POST ["cidade"];
+        $bairro = $_POST ["bairro"];
+        $rua = $_POST ["rua"];
+        $cep = $_POST ["cep"];
+        $num = $_POST ["num"];
+        editarEnderecos($id, $cidade, $bairro, $rua, $cep, $num);
+        redirecionar("endereco/listarEnderecos");
+    }else {
+        $dados["endereco"] = pegarEnderecoPorId($id);
+        exibir("endereco/cadastroE", $dados);
+    }
+    
+}

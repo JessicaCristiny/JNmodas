@@ -47,9 +47,9 @@
 	  <button class="ui button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><a href="inicial.html">Página Inicial</font></font></button>
 	  <button class="ui button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><a href="./cliente/listarClientes"> Cadastro</a></font></font></button>
 	  <button class="ui button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><a href="./produto/listarProdutos">Produtos</a></font></font></button>
-	  <button class="ui button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><a href="sessaoadm.html">Sessão Administrador</a></font></font></button>
-	  <button class="ui button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><a href="cadastroproduto.html">Cadastrar Produtos</a></font></font></button>
-</div>
+          <button class="ui button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><a href="./endereco/listarEnderecos">Endereços</a></font></font></button>
+          <button class="ui button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><a href="./categoria/listarCategoria">Categorias</a></font></font></button>
+</div>    
 </div>
 </div>
            

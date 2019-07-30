@@ -25,6 +25,7 @@
                     <td><?=$endereco['cep']?></td>
                     <td><?=$endereco['num']?></td>
                     <td><a href="./endereco/ver/<?=$endereco['idendereco']?>">Ver</a></td>
+                    <td><a href="./endereco/editar/<?=$endereco['idendereco']?>">Editar</a></td>
                     <td><a href="./endereco/deletar/<?=$endereco['idendereco']?>">Deletar</a></td>
                 </tr>
                 <?php endforeach; ?>
