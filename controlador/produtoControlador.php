@@ -1,5 +1,6 @@
 <?php 
     require_once "modelo/ProdutoModelo.php";
+    require_once "modelo/categoriaModelo.php";
     function visualizar() {
     $vetor_dados = array();
     $vetor_dados ["nome"]= "Salto Feminino";
@@ -44,11 +45,14 @@ function adicionar(){
         }
       
          $msg = adicionarProduto($nome, $descricao, $valor);
-         redirecionar("produto/listarProdutos");
+         echo $msg;
+         //redirecionar("produto/listarProdutos");
         
         //redirecionar("formulario/index");
     } else {
-        exibir("produto/formulario");
+        $dados = array ();
+        $dados ["categorias"] = pegarTodasCategoria();
+        exibir("produto/formulario", $dados);
     }
     
 }
