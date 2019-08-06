@@ -18,11 +18,10 @@ create table produto (
         descricao varchar (230) not null,
         valor varchar (10) not null,
         categoria varchar(8) not null,
-
         estoqueMinimo int(11) NOT NULL,
         estoqueMaximo int(11) NOT NULL,
         primary key(idProduto),
-        foreign key(categoria) references categoria(codigo)
+        foreign key(categoria) references categoria(idcategoria)
 );
       
 create table enderecos (
