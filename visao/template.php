@@ -44,7 +44,7 @@
 
 <div id="barramenu">
 <div class="five ui buttons">
-	  <button class="ui button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><a href="inicial.html">Página Inicial</font></font></button>
+	  <button class="ui button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><a href="./">Página Inicial</font></font></button>
 	  <button class="ui button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><a href="./cliente/listarClientes"> Cadastro</a></font></font></button>
 	  <button class="ui button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><a href="./produto/listarProdutos">Produtos</a></font></font></button>
           <button class="ui button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><a href="./endereco/listarEnderecos">Endereços</a></font></font></button>
@@ -63,6 +63,7 @@
 				<h3><i class="phone icon "></i></h3>
 				<p>Cel: (15)99785-5420</p>
 			</div>
+            
 			<div class="four wide column roda">
 				<h3><i class="envelope icon"></i></h3>
 				<p>Email: jnmodas@gmail.com</p>

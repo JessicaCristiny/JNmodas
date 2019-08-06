@@ -1,7 +1,7 @@
 
 <?php
     function adicionarProduto ($nome, $descricao, $valor) {
-        $sql = "INSERT INTO produto (nomeProduto, descricao, preco) VALUES ('$nome', '$descricao', '$valor')";
+        $sql = "INSERT INTO produto (nomeProduto, descricao, valor) VALUES ('$nome', '$descricao', '$valor')";
         $cnx = conn();
         $resultado = mysqli_query($cnx, $sql);
         if (!$resultado) { die ('Erro ao cadastrar produto' . mysqli_error($cnx)); }
@@ -13,7 +13,6 @@ function pegarTodosProdutos () {
     $produtos = array ();
     while ($linha = mysqli_fetch_assoc($resultado)){
         $produtos [] = $linha;
-        
     }
     return $produtos;
 }
