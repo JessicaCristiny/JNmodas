@@ -39,7 +39,7 @@ function adicionar(){
         }
          if(is_string($descricao)){
 
-        }else{
+        } else {
             echo 'Não é do tipo String.';
         }
       
@@ -67,7 +67,7 @@ function deletar ($id) {
     redirecionar("produto/listarProdutos");
 }
 function editar ($id) {
-    if (ehPost()) {
+        if (ehPost()) {
         $nome = $_POST ["nome"];
         $descricao = $_POST ["descricao"];
         $valor = $_POST ["valor"];
