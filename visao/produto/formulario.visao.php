@@ -14,18 +14,3 @@
     
 </form>
 
-<?php
-
-$nomes = array();
-$nomes[0] = "Jessica";
-$nomes[1] = "Nathalia";
-$nomes[2] = "Danilo";
-
-for($i=0; $i<=2; $i++) {
-    echo $nomes[$i];
-}
-
-foreach ($nomes as $a) {
-    echo $a;
-}
-
