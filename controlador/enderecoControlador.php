@@ -1,6 +1,6 @@
 <?php
 require_once 'modelo/enderecoModelo.php';
-function cadastroE(){
+function cadastroE($idcliente){
     if (ehPost ()){
         $cidade = strip_tags($_POST ["cidade"]);
         $bairro = strip_tags($_POST ["bairro"]);
@@ -60,7 +60,7 @@ function cadastroE(){
         }else{
             echo 'Não é do tipo String.';
         }
-    $msg = adicionarEndereco($cidade, $bairro, $rua, $cep, $num);
+    $msg = adicionarEndereco($idcliente, $cidade, $bairro, $rua, $cep, $num);
     redirecionar("endereco/listarEnderecos");   
         
     } else {

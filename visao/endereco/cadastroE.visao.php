@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
+
     <form action="" method="POST">   
 				
 				<label for="email"><b>Cidade</b></label>
@@ -28,5 +23,3 @@
 		  </b>
                      
     </form>
-    </body>
-</html>
