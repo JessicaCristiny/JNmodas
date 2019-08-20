@@ -3,4 +3,5 @@
 <p>Nome: <?=$produto['nome']?></p>
 <p>Descrição: <?=$produto['descricao']?></p>
 <p>Valor: <?=$produto['valor']?></p>
+<a href="./carrinho/adicionar/<?=$produto['idProduto']?>">Comprar</a>
 

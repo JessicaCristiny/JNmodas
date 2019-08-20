@@ -34,7 +34,7 @@ num varchar(20) not null,
 primary key (idendereco)
 foreign key(idcliente) references cliente(id) on delete cascade on update cascade
 );
-);
+
 
 create table categoria (
 idcategoria integer not null auto_increment,
@@ -84,6 +84,17 @@ idpedido int (11)  not null,
 quantidade int(11) not null,
 foreign key(idProduto) references produto(codigo) on delete cascade on update cascade,
 foreign key(idpedido) references produto(codigo) on delete cascade on update cascade
+);
+
+create table formadepagamento (
+
+);
+
+create table carrinho (
+idcarrinho int (12) auto_increment not null,
+resumo int (60) not null,
+valortotal int (30) not null,
+primary key (idcarrinho)
 );
 
 

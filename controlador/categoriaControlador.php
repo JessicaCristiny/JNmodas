@@ -13,7 +13,6 @@
             }
             
         }
-        
         function listarCategoria () {
             $dados = array ();
             $dados ["categorias"] = pegarTodasCategoria();
@@ -32,7 +31,7 @@
             if (ehPost()) {
                 $descricao = $_POST ["descricao"];
                 $idcategoria = $_POST ["idcategoria"];
-            editarCategoria ($id, $nome, $email);
+            editarCategoria ($id, $descricao);
             redirecionar ("categoria/listar");
             } else {
                 $dados ["categoria"] = pegarCategoriaPorId ($id);
@@ -41,4 +40,5 @@
         }
 ?>
     
+
 

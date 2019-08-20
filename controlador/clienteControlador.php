@@ -36,7 +36,6 @@ function cadastro(){
          if (strlen(trim($_POST['data'])) == 0) {
             echo "Você deve inserir sua data de nascimento. <br>";
         }
-       
     //cel
         if (strlen(trim($_POST['cel'])) == 0) {
             echo "Você deve inserir seu numero de celular. <br>";
@@ -50,15 +49,13 @@ function cadastro(){
             echo "Você deve inserir uma senha. <br>";
         }
         $senha = filter_input(INPUT_POST, 'senha', FILTER_VALIDATE_INT);
-        if ($senha == FALSE) {
+        if ($senha == FALSE) {  
             echo  "Informe uma senha valida.<br>";
         }
-
         $msg = adicionarCliente($nome, $email, $cpf, $data, $cel, $senha);
         redirecionar('cliente/listarClientes');
         
         //redirecionar("formulario/index");
-        
     } else {
         exibir("cliente/cadastro");
     }
