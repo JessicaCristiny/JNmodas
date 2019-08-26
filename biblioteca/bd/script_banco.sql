@@ -26,6 +26,7 @@ create table produto (
       
 create table enderecos (
 idendereco integer not null auto_increment,
+idcliente  integer not null,
 cidade varchar(20) not null,
 bairro varchar(20) not null,
 rua varchar(100) not null,
@@ -34,7 +35,6 @@ num varchar(20) not null,
 primary key (idendereco)
 foreign key(idcliente) references cliente(id) on delete cascade on update cascade
 );
-
 
 create table categoria (
 idcategoria integer not null auto_increment,
