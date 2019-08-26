@@ -13,6 +13,9 @@ function adicionar(){
         $nome = strip_tags($_POST ["nome"]);
         $descricao =  strip_tags( $_POST ["descricao"]);
         $valor = strip_tags($_POST ["valor"]);
+        $estoqueMinimo = strip_tags($_POST ["estoqueMinimo"]);
+        $estoqueMaximo = strip_tags($_POST ["estoqueMaximo"]);
+        $categoria = strip_tags($_POST["categoria"]);
         
     //nomeproduto
         if (strlen(trim($_POST['nome'])) == 0) {
@@ -44,7 +47,7 @@ function adicionar(){
             echo 'Não é do tipo String.';
         }
       
-         $msg = adicionarProduto($nome, $descricao, $valor);
+         $msg = adicionarProduto($nome, $descricao, $valor, $estoqueMinimo, $estoqueMaximo, $categoria);
          echo $msg;
          //redirecionar("produto/listarProdutos");
         

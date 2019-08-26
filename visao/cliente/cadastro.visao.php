@@ -32,7 +32,7 @@
                                  <button type="submit" class="signupbtn">Confirmar</button>
 			
                                  
-                                 hyhy
+                               
 		  </b>
                      
     </form>

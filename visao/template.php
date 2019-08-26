@@ -14,8 +14,10 @@
 	<div id="barrapesquisa">		
 	<div class="ui category search">
 		<div class="ui icon input">
-			<input class="prompt" type="text" placeholder="Search...">
-			<i class="search icon"></i>
+                    <form action="./busca/pesquisar" method="POST"> 
+                    <label for="email"><b>Pesquisar</b></label>
+                    <input type="text" placeholder="Pesquisar" name="pesquisar" required="">
+                    </form>
 		</div>
 		<div class="results"></div>
 	</div>
