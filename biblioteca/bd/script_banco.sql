@@ -32,8 +32,8 @@ bairro varchar(20) not null,
 rua varchar(100) not null,
 cep varchar(20) not null,
 num varchar(20) not null,
-primary key (idendereco)
-foreign key(idcliente) references cliente(id) on delete cascade on update cascade
+primary key (idendereco),
+foreign key(idcliente) references cliente(idcliente) on delete cascade on update cascade
 );
 
 create table categoria (
@@ -87,7 +87,9 @@ foreign key(idpedido) references produto(codigo) on delete cascade on update cas
 );
 
 create table formadepagamento (
-
+idFormadePagamento int auto_increment not null,
+descricao varchar(45) not null,
+primary key (idFormadePagamento)
 );
 
 create table carrinho (
