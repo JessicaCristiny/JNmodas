@@ -13,11 +13,11 @@ primary key (idcliente)
 );
 
 create table produto (
-        idProduto integer not null auto_increment,
+        idProduto int not null auto_increment,
         nome varchar (20) not  null,
         descricao varchar (230) not null,
         valor varchar (10) not null,
-        categoria varchar(8) not null,
+        categoria int not null,
         estoqueMinimo int(11) NOT NULL,
         estoqueMaximo int(11) NOT NULL,
         primary key(idProduto),
@@ -37,7 +37,7 @@ foreign key(idcliente) references cliente(id) on delete cascade on update cascad
 );
 
 create table categoria (
-idcategoria integer not null auto_increment,
+idcategoria int not null auto_increment,
 descricao varchar (50) not null,
 primary key (idcategoria)
 );
@@ -87,7 +87,8 @@ foreign key(idpedido) references produto(codigo) on delete cascade on update cas
 );
 
 create table formadepagamento (
-
+idFormaPagamento int (11) auto_increment not null,
+descricao varchar (100) not null,
 );
 
 create table carrinho (
