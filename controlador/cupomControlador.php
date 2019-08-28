@@ -1,26 +1,35 @@
 <?php
-require_once 'servico/validarServico.php';
 require_once 'modelo/cupomModelo.php';
-function cadastro() {
+function cadastro(){
     if (ehPost()) {
+    
         $nomecupom = $_POST ["nomecupom"];
         $desconto = $_POST ["desconto"];
         $errors = array();
-        if (valida_nao_vazio($nomecupom, "nomecupom") != NULL) {
-            $errors[] = valida_nao_vazio($nomecupom, "nomecupom");
+        if (ehPost()) {
+       
+        $desconto = strip_tags($_POST ["desconto"]);
+        $nomecupom = strip_tags ($_POST["nomecupom"]);
+        $errors = array();
+        
+        if (strlen(trim($desconto)) == 0) {
+            $errors[] = "Você deve inserir um Desconto.";
         }
-        if (valida_tipoEspe($desconto, "desconto") != NULL) {
-            $errors[] = valida_tipoEspe($desconto, "desconto");
+        
+         if (strlen(trim($nomecupom)) == 0) {
+            $errors[] = "Você deve inserir um nome do cupom.";
         }
-        if (count($errors) > 0) {
+      
+       
+        if (count($errors) > 0 ) {
             $dados = array();
             $dados["errors"] = $errors;
             exibir("cupom/formulario", $dados);
-        } else {
-            $msg = adicionarCupom($nomecupom, $desconto);
-            echo $msg;
+        }else {
+            $msg = adicionarCupom ($desconto, $nomecupom);
             redirecionar("cupom/listarCupom");
-        }
+              }
+        
     } else {
         exibir("cupom/formulario");
     }
@@ -28,7 +37,7 @@ function cadastro() {
 
 function listarCupom() {
     $dados = array();
-    $dados["cupoms"] = pegarTodosCupom();
+    $dados["cupom"] = pegarTodosCupom();
     exibir("cupom/listar", $dados);
 }
 function ver($idcupom){
@@ -69,5 +78,6 @@ function adicionar($idcupom) {
         exibir ("cupom/formulario", $dados);
     }
 } 
+}
 ?>
 

@@ -47,7 +47,7 @@ function adicionar(){
             echo 'Não é do tipo String.';
         }
       
-         $msg = adicionarProduto($nome, $descricao, $valor, $estoqueMinimo, $estoqueMaximo, $categoria);
+         $msg = adicionarProduto($nome, $descricao, $valor,  $categoria, $estoqueMinimo, $estoqueMaximo);
          echo $msg;
          //redirecionar("produto/listarProdutos");
         
@@ -79,7 +79,7 @@ function editar ($id) {
         $descricao = $_POST ["descricao"];
         $valor = $_POST ["valor"];
         $categoria = $_POST ["categoria"];
-        editarCliente ($idProduto, $nome, $descricao, $valor, $categoria);
+        editarCliente ($idProduto, $nome, $descricao, $valor, $categoria, $estoqueMinimo, $estoqueMaximo);
         redirecionar ("produto/listar");
         } else {
             $dados ["produto"] = pegarProdutoPorId($id);

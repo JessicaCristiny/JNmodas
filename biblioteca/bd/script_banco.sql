@@ -17,7 +17,7 @@ create table produto (
         nome varchar (20) not  null,
         descricao varchar (230) not null,
         valor varchar (10) not null,
-        categoria int not null,
+        categoria int (8) not null,
         estoqueMinimo int(11) NOT NULL,
         estoqueMaximo int(11) NOT NULL,
         primary key(idProduto),
@@ -37,7 +37,7 @@ foreign key(idcliente) references cliente(idcliente) on delete cascade on update
 );
 
 create table categoria (
-idcategoria int not null auto_increment,
+idcategoria int (8) not null auto_increment,
 descricao varchar (50) not null,
 primary key (idcategoria)
 );
@@ -55,7 +55,7 @@ primary key (id_Log)
 
 create table cupom(
 id int (11) auto_increment  not null,
-nome_cupom varchar (60) not null,
+nomecupom varchar (60) not null,
 desconto int (11) not null,
 primary key (id)
 );
