@@ -54,10 +54,10 @@ primary key (id_Log)
 
 
 create table cupom(
-id int (11) auto_increment  not null,
+idcupom int (11) auto_increment  not null,
 nomecupom varchar (60) not null,
 desconto int (11) not null,
-primary key (id)
+primary key (idcupom)
 );
 
 create table estoque(
