@@ -14,6 +14,12 @@ function pegarTodasFormaPagamento(){
 	}
 	return $formaPagamento;
 }
+function pegarFormaPagamentoPorId ($id){
+    $sql = "select *from formadepagamento where idFormadePagamento = $id";
+    $resultado = mysqli_query(conn (), $sql);
+    $formaPagamento = mysqli_fetch_assoc($resultado);
+    return $formaPagamento;
+}
 function deletarFormaPagamento ($idFormdadePagamento){
     $sql = "delete from formadepagamento where idFormadePagamento = $idFormdadePagamento";
     $resultado = mysqli_query(conn(), $sql);

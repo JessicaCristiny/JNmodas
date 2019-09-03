@@ -45,16 +45,18 @@
 	</div>
 
 <div id="barramenu">
-<div class="five ui buttons">
-	  <button class="ui button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><a href="./">Página Inicial</font></font></button>
-          <button class="ui button"><font style ="vertical-align: inherit"><font style =" vertical-align:inherit"><a href="./cupom/listarCupom">Cupom</font></font></button>
-	  <button class="ui button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><a href="./cliente/listarClientes"> Cadastro</a></font></font></button>
-	  <button class="ui button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><a href="./produto/listarProdutos">Produtos</a></font></font></button>
-          <button class="ui button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><a href="./endereco/listarEnderecos">Endereços</a></font></font></button>
-          <button class="ui button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><a href="./categoria/listarCategoria">Categorias</a></font></font></button>
+
+    <a href="./">Página Inicial</a>
+    <a href="./cliente/listarClientes"> Cadastro</a>
+    <a href="./produto/listarProdutos">Produtos</a>
+    <a href="./endereco/listarEnderecos">Endereços</a>
+    <a href="./categoria/listarCategoria">Categorias</a>
+    <a href="./cupom/listarCupom">Cupom</a>
+    <a href="./cupom/listarCupom">Forma de Pagamento</a>
+
 </div>    
 </div>
-</div>
+
            
         <main class="container">
             <?php require $viewFilePath; ?>

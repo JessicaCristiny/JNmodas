@@ -17,6 +17,10 @@ function listarFormaPagamento() {
     $dados["formaPagamentos"] = pegarTodasFormaPagamento();
     exibir("formaPagamento/listar", $dados);
 }
+function ver($id){
+    $dados["formaPagamento"] = pegarFormaPagamentoPorId($id);
+    exibir("formaPagamento/visualizar", $dados);
+}
 function deletar ($idFormadePagamento){
     $msg = deletarFormaPagamento($idFormadePagamento);
     redirecionar('formaPagamento/listarFormaPagamento');        
