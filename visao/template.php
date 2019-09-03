@@ -52,7 +52,7 @@
     <a href="./endereco/listarEnderecos">Endereços</a>
     <a href="./categoria/listarCategoria">Categorias</a>
     <a href="./cupom/listarCupom">Cupom</a>
-    <a href="./cupom/listarCupom">Forma de Pagamento</a>
+    <a href="./formaPagamento/listarFormaPagamento">Forma de Pagamento</a>
 
 </div>    
 </div>

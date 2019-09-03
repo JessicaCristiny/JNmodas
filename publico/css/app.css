@@ -36,7 +36,8 @@ body {
 }
 #barramenu {
 	margin: 1%;
-        padding: :2%;
+        padding: 2%;
+        border: solid;
 }
 
 .rodape {
