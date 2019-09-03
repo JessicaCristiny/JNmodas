@@ -1,10 +1,5 @@
-<?php
-if (ehPost()) {
-    foreach ($errors as $erro) {
-        echo "$erro<br>";
-    }
-}
-?>
+
+
 <h1> Cupom </h1>
 <form method="POST" action="">
     Nome do Cupom: <input type="text" name="nomecupom" value="<?=@$cupom['nomecupom']?>"><br>

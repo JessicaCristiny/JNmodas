@@ -11,7 +11,7 @@
 			<th>ALTERAR</th>
 		</tr>
 	</thead>
-		<?php foreach ($cupoms as $cupom): ?>
+		<?php foreach ($cupom as $cupom): ?>
 			<tr>
 				<td><?=$cupom['idcupom']?></td>
 				<td><?=$cupom['nomecupom']?></td>

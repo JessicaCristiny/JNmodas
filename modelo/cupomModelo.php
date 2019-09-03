@@ -1,5 +1,5 @@
 <?php
-function adicionarCupom($nomecupom, $desconto) {
+function adicionarCupom ($nomecupom, $desconto) {
     $sql = "INSERT INTO cupom (nomecupom, desconto) VALUES ('$nomecupom', '$desconto')";
     $resultado = mysqli_query($cnx = conn(), $sql);
     if (!$resultado) {
@@ -16,7 +16,7 @@ function pegarTodosCupom() {
     }
     return $cupom;
 }
-function pegarCupomPorId($id) {
+function pegarCupomPorId() {
     $sql = "select * from cupom where idcupom= $id";
     $resultado = mysqli_query(conn(), $sql);
     $cupom = mysqli_fetch_assoc($resultado);
