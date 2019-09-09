@@ -27,3 +27,10 @@ function deletarFormaPagamento ($idFormdadePagamento){
         die('Erro ao deletar a forma de pagamento' . mysqli_error($cnx));
     }
 }
+function editarFormaPagamento ($idFormdadePagamento, $descricao){
+    $sql = "update formadepagamento set descricao = '$descricao' where idFormadePagamento = $idFormdadePagamento";
+     $resultado = mysqli_query(conn(), $sql);
+    if(!resultado){
+        die('Erro ao editar a forma de pagamento' . mysqli_error($cnx));
+    }
+}

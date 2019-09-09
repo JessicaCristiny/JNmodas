@@ -49,7 +49,7 @@ function adicionar(){
       
          $msg = adicionarProduto($nome, $descricao, $valor,  $categoria, $estoqueMinimo, $estoqueMaximo);
          echo $msg;
-         //redirecionar("produto/listarProdutos");
+         redirecionar("produto/listarProdutos");
         
         //redirecionar("formulario/index");
     } else {

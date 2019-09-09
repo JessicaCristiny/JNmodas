@@ -4,6 +4,8 @@
 		<tr>
 			<th>ID</th>
 			<th>DESCRICAO</th>
+                        <th>VER</th>
+                        <th>EDITAR</th>
                         <th>Deletar</th>
 			
 		</tr>
@@ -12,6 +14,8 @@
 		<tr>
 			<td><?=$formaPagamento['idFormadePagamento']?></td>
 			<td><?=$formaPagamento['descricao']?></td>
+                        <td><a href="./formaPagamento/ver/<?=$formaPagamento['idFormadePagamento']?>">ver</a></td>
+                        <td><a href="./formaPagamento/editar/<?=$formaPagamento['idFormadePagamento']?>">Editar</a></td>
                         <td><a href="./formaPagamento/deletar/<?=$formaPagamento['idFormadePagamento']?>">Deletar</a></td>
 		</tr>
 	<?php endforeach; ?>

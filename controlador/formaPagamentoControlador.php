@@ -25,3 +25,13 @@ function deletar ($idFormadePagamento){
     $msg = deletarFormaPagamento($idFormadePagamento);
     redirecionar('formaPagamento/listarFormaPagamento');        
 }
+function editar ($id){
+    if(ehPost()){
+        $descricao = $_POST["descricao"];
+        editarFormaPagamento ($idFormdadePagamento, $descricao);
+        redirecionar('formaPagamento/listarFormaPagamento');
+    }else {
+        $dados["formaPagamento"] = pegarFormaPagamentoPorId($id);
+        exibir("formaPagamento/formulario", $dados);
+    }
+}
