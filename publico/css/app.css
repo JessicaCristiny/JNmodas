@@ -135,3 +135,9 @@ body {
 	margin:10%;
 	background-color:white;
 }
+
+
+#total {
+    background-color: red;
+    height: 20px;   
+}

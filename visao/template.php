@@ -6,6 +6,7 @@
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="./publico/css/semantic.min.css">
         <link rel="stylesheet" href="./publico/css/app.css">
+        
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     </head>

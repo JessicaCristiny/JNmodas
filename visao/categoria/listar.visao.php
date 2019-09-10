@@ -14,7 +14,9 @@
                     <th>ID CATEGORIA</th>
                     <th>DESCRICAO</th>
                     <th>Visualizar</th>
+                    <th>Editar</th>
                     <th>Deletar</th>
+                    
                 </tr>
             </thead>
             <?php foreach ($categorias as $categoria): ?>
@@ -22,7 +24,7 @@
                 <td><?=$categoria['idcategoria']?></td>
                 <td><?=$categoria['descricao']?></td>
                 <td><a href="./categoria/ver/<?=$categoria['idcategoria']?>">Ver</a></td>
-                <td><a href ="./categoria/editar/<?=$categoria['idcategoria']?>">Alterar</a></td>
+                <td><a href ="./categoria/editar/<?=$categoria['idcategoria']?>">Editar</a></td>
                 <td><a href ="./categoria/deletar/<?=$categoria['idcategoria']?>">Deletar</a></td>
             </tr>
             <?php endforeach; ?>
