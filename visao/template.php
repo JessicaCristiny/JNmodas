@@ -42,13 +42,14 @@
 
             </div>
             <div id="logo">
-
+             <img id="imglogo"src="./publico/imagem/logo.png"></img>
+             
             </div>
 
             <div id="barramenu">
 
                 <a href="./">Página Inicial</a>
-                <a href="./cliente/listarClientes"> Cadastro</a>
+                <a href="./cliente/listarClientes">Cadastro</a>
                 <a href="./produto/listarProdutos">Produtos</a>
                 <a href="./endereco/listarEnderecos">Endereços</a>
                 <a href="./categoria/listarCategoria">Categorias</a>

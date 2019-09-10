@@ -16,7 +16,7 @@ function adicionar(){
         $estoqueMinimo = strip_tags($_POST ["estoqueMinimo"]);
         $estoqueMaximo = strip_tags($_POST ["estoqueMaximo"]);
         $categoria = strip_tags($_POST["categoria"]);
-        
+    
     //nomeproduto
         if (strlen(trim($_POST['nome'])) == 0) {
             echo "Você deve inserir seu nome. <br>";
