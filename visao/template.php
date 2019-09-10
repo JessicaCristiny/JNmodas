@@ -41,7 +41,8 @@
 
             </div>
             <div id="logo">
-             <img id="imglogo"src="logo.png"></img>
+             <img id="imglogo"src="./publico/imagem/logo.png"></img>
+             
             </div>
 
             <div id="barramenu">
