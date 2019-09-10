@@ -1,6 +1,6 @@
 <?php
-function adicionarCupom ($nomecupom, $desconto) {
-    $sql = "INSERT INTO cupom (nomecupom, desconto) VALUES ('$nomecupom', '$desconto')";
+function adicionarCupom ($idcupom, $nomecupom, $desconto) {
+    $sql = "INSERT INTO cupom (idcupom, nomecupom, desconto) VALUES ('$idcupom', '$nomecupom', '$desconto')";
     $resultado = mysqli_query($cnx = conn(), $sql);
     if (!$resultado) {
         die('Erro ao cadastrar o cupom' . mysqli_error($cnx));
@@ -16,8 +16,8 @@ function pegarTodosCupom() {
     }
     return $cupom;
 }
-function pegarCupomPorId() {
-    $sql = "select * from cupom where idcupom= $id";
+function pegarCupomPorId($id) {
+    $sql = "select * from cupom where idcupom = $id";
     $resultado = mysqli_query(conn(), $sql);
     $cupom = mysqli_fetch_assoc($resultado);
     return $cupom;
@@ -31,7 +31,7 @@ function deletarCupom($id) {
     return 'Cupom deletado com sucesso!';
 }
 function editarCupom($idcupom, $nomecupom, $desconto) {
-    $sql = "UPDATE cupom SET nomecupom ='$nomecupom', desconto ='$desconto' WHERE idcupom='$idcupom'";
+    $sql = "UPDATE cupom SET idcupom ='$idcupom', nomecupom ='$nomecupom' WHERE desconto='$desconto'";
     $resultado = mysqli_query($cnx = conn(), $sql);
     if (!$resultado) {
         die('Erro ao alterar cupom' . mysqli_error($cnx));
