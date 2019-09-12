@@ -30,7 +30,7 @@
             <?php endforeach; ?>
         </table>
         <a href ="./categoria/adicionar" class ="btn btn-primary">Nova Categoria</a>
-        <select> </select>
+
         
 </body>
 </html>

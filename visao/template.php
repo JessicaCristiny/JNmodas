@@ -23,38 +23,22 @@
                     <div class="results"></div>
                 </div>
             </div>
-            <div id="ladoesq">
-
-                <div class="ui animated button" tabindex="0">
-                    <div class="visible content"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Login</font></font></div>
-                    <div class="hidden content"><a href="login.html">
-                            <i class="right arrow icon"></a></i>
-                    </div>
-                </div>
-
-
-                <div class="ui vertical animated button" tabindex="0">
-                    <div class="hidden content"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><a href="carrinho.html">fazer compras</font></font></a></div>
-                    <div class="visible content">
-                        <i class="shop icon"></i>
-                    </div>
-                </div>
-
-            </div>
+          
             <div id="logo">
-             <img id="imglogo"src="./publico/imagem/logo.png"></img>
+             <img src="./publico/imagem/logo.png"></img>
              
             </div>
 
             <div id="barramenu">
 
-                <a href="./">Página Inicial</a>
-                <a href="./cliente/listarClientes">Cadastro</a>
-                <a href="./produto/listarProdutos">Produtos</a>
-                <a href="./endereco/listarEnderecos">Endereços</a>
-                <a href="./categoria/listarCategoria">Categorias</a>
-                <a href="./cupom/listarCupom">Cupom</a>
-                <a href="./formaPagamento/listarFormaPagamento">Forma de Pagamento</a>
+                <a class="botaomenu" href="./">Página Inicial</a>
+                <a class="botaomenu"href="./cliente/listarClientes">Cadastro</a>
+                <a class="botaomenu"href="./produto/listarProdutos">Produtos</a>
+                <a class="botaomenu"href="./endereco/listarEnderecos">Endereços</a>
+                <a class="botaomenu"href="./categoria/listarCategoria">Categorias</a>
+                <a class="botaomenu"href="./cupom/listarCupom">Cupom</a>
+                <a class="botaomenu"href="./formaPagamento/listarFormaPagamento">Forma de Pagamento</a>
+                <a class="botaomenu"href="./carrinho/listar">Carrinho</a>
 
             </div>    
         </div>

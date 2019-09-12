@@ -5,8 +5,12 @@ body {
     background-color:MistyRose;
 }
 #menu {
-	background-image:url(fundomenu.jpg);
+	background-image:url(./publico/imagem/fundomenu.jpg);
 	padding-top:3%;
+        
+}
+.botaomenu{
+    margin: 2%;
 }
 #logo {
 	border-radius:100%;
@@ -16,27 +20,20 @@ body {
 	margin-left:6%;
 
 }
-#imglogo {
-	margin-top:30%;
-	width:100%;
+
+#logo img{
+    width:100%;
+    margin-top:5%;
 }
 #barrapesquisa{
 	float:right;
 	padding-right:10%;
 	padding-top:4%;
 }
-#ladoesq {
-	float:right;
-	padding-bottom:3%;
-	padding-top:3%;
-	padding-left:70%;
-	padding-right:11%;
-	
-}
 #barramenu {
 	margin: 1%;
         padding: 2%;
-        border: 2px solid red;
+        border: 2px solid #d43c61;
 }
 
 .rodape {
@@ -62,82 +59,25 @@ body {
 	float:left;
 	margin:2%;
 }
-.caixacadastro {
-	margin:5%;
-	background-color:white;
-}
-.adicione {
-	text-align:center;
-}
-#caixavideo {
-	background-color:pink;
-}
-.produtos {
-	width:60%;
-	margin-top:2%;
-}
-.produtos img {
-	border:solid;
-	border-color:black;
-}
-.imageG {
-	width:50%;
-	height:60%;
-	margin-left:3%;
-	margin-top:3%;
-	border:solid;
-	border-color:black;
-}
-.detalhes {
-	float: right;
-	margin-right:10%;
-	margin-top:15%;
-	width:30%;
-}
-.detalhes h1 {
-	margin-left:4%;
-}
-.botao {
-	margin-top:10%;
-}
-.tamanho button {
-	margin-left:12%;
-	margin-right:4%;
-	margin-top:2%;
-}
-.quant {
-	margin-top:10%;
-	text-align:center;
-}
-.car {
-	margin-left:22%;
-}
-.nometito {
-	text-align:center;
-}
-#login {
-	height:60%;
-	width:35%;
-	background-color:white;
-	margin-left:35%;
-	margin-top:5%;
-	margin-bottom:10%;
-}
-#login h2 {
-	text-align:center;
-	padding:2%;
-}
-.centro {
-	margin-top:2%;
-	text-align:center;
-}
-#caixa {
-	margin:10%;
-	background-color:white;
-}
-
 
 #total {
-    background-color: red;
-    height: 20px;   
+    background-color: white;
+    float:right;
+    width: 50%;
+       
+}
+.carrinho{
+    width: 50%;
+}
+.verProduto{
+    text-align: center;
+    border: 2px solid #d43c61;
+    margin-left:  30%;
+    margin-right: 30%;
+    
+}
+#botaoCompra {
+    border: 2px solid #d43c61;
+    margin-bottom:  2%;
+
 }

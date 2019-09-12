@@ -3,7 +3,7 @@
         
         <table border ="1">
             <thead>
-            <table border ="1">
+            <table border ="1" class="carrinho">
                 <tr>
                     <th>NOME</th>
                     <th>DESCRICAO</th>
