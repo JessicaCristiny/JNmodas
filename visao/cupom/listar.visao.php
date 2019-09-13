@@ -1,4 +1,4 @@
-
+<div class="meio">
 <h2>Listar Cupom </h2>
 <table class="table" border="1">
 	<thead>
@@ -23,4 +23,4 @@
 		<?php endforeach; ?>
 </table>
 <a href="./cupom/cadastro" class="btn btn-primary"> Novo cupom </a>    
-
+</div>

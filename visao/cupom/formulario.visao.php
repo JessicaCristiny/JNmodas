@@ -1,4 +1,4 @@
-
+<div class="meio">
 
 <h1> Cupom </h1>
 <form method="POST" action="">
@@ -6,4 +6,4 @@
     Desconto: <input type="text" name="desconto" value="<?=@$cupom['desconto']?>"><br>
     <button type="submit"> Enviar </button>
 </form>
-
+</div>

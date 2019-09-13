@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 
-
+<div class="meio">
     <form action="" method="POST">   
 				
 				<label for="email"><b>Cidade</b></label>
-				<input type="text" placeholder="Cidade" name="cidade" value="<?=@$endereco['cidade']?>" required="">
+                                <input type="text" placeholder="Cidade" name="cidade" value="<?=@$endereco['cidade']?>" required="">
 				
 				<label for="email"><b>Bairro</b></label>
 				<input type="text" placeholder="Bairro" name="bairro" value="<?=@$endereco['bairro']?>" required="">
@@ -23,3 +23,4 @@
 		  </b>
                      
     </form>
+</div>

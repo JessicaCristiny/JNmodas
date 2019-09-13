@@ -1,4 +1,4 @@
-
+<div class="meio">
 <form action="" method="POST">
     Nome: <input type="text" name="nome" value = "<?=@$produto['nome']?>">
     Descrição: <input type="text" name="descricao" value = "<?=@$produto['descricao']?>">
@@ -16,3 +16,4 @@
     
 </form>
 
+</div>

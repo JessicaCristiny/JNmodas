@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
+<div class="meio">
         <h2>Listar Clientes</h2>
         <table border = "1">
             <thead>
@@ -15,6 +8,9 @@
                     <th>Cpf</th>
                     <th>Data Nascimento</th>
                     <th>Cel</th>
+                    <th>Ver</th>
+                    <th>Editar</th>
+                    <th>Deletar</th>
                 </tr>
             </thead>
                 <?php foreach ($clientes as $cliente): ?>
@@ -31,6 +27,4 @@
                 <?php endforeach; ?>
             </table>    
         <a href="./cliente/cadastro" class="btn btn-primary">Novo Cliente</a>
-        
-    </body>
-</html>
+</div>

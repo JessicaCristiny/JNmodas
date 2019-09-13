@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
+<div class="meio">
         <h2>Listar Categoria</h2>
 
         <table border ="1">
@@ -32,6 +25,5 @@
         <a href ="./categoria/adicionar" class ="btn btn-primary">Nova Categoria</a>
 
         
-</body>
-</html>
+</div>
 

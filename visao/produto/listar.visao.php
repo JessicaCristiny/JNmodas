@@ -1,7 +1,8 @@
+<div class="meio">
 <h2> Listar Produtos</h2>
         
-        <table border ="1">
-            <thead>
+     
+  
             <table border ="1">
                 <tr>
                     <th>NOME</th>
@@ -26,6 +27,6 @@
         </table>
         </table>
         <a href ="./produto/adicionar" class ="btn btn-primary">Novo produto</a>
-
+</div>
 
 

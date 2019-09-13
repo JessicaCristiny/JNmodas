@@ -1,3 +1,4 @@
+<div class="meio">
 <h2>Listar Formas de Pagamento</h2>
 <table class="table" border="1">
 	<thead>
@@ -21,3 +22,4 @@
 	<?php endforeach; ?>
 </table>
 <a href="./formaPagamento/formulario" class="btn btn-primary"> Nova Forma de Pagamento</a>
+</div>

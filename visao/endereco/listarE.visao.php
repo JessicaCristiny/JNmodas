@@ -1,3 +1,4 @@
+<div class="meio">
 <h2>Listar Endereços</h2>
 <table border = "1">
     <thead>
@@ -7,6 +8,9 @@
             <th>Rua</th>
             <th>Cep</th>
             <th>Num</th>
+            <th>Ver</th>
+            <th>Editar</th>
+            <th>Deletar</th>
         </tr>
     </thead>
         <?php foreach ($enderecos as $endereco): ?>
@@ -24,3 +28,4 @@
     </table>    
 <a href="./endereco/cadastroE/<?=@$cliente['idcliente']?>" class="btn btn-primary">Novo Endereço</a>
 
+</div>

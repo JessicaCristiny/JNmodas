@@ -5,6 +5,7 @@
         <title></title>
     </head>
     <body>
+        <div class="meio">
            <form action="" method="POST">   
 				
             <label for="email"><b>Descrição</b></label>
@@ -12,5 +13,6 @@
 			
             <button type="submit" class="signupbtn">Confirmar</button>       
     </form>
+        </div>
     </body>
 </html>

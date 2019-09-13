@@ -83,6 +83,7 @@ function editar ($id) {
         redirecionar ("produto/listar");
         } else {
             $dados ["produto"] = pegarProdutoPorId($id);
-            exibir("produto/formulario", $dados);
+            $dados ["categorias"] = pegarTodasCategoria();
+            exibir("produto/editar", $dados);
             }
 }  

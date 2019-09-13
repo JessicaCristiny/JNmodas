@@ -6,6 +6,7 @@
         <title></title>
     </head>
     <body>
+        <div class="meio">
     <form action="" method="POST">   
 				
 				<label for="email"><b>Nome Completo</b></label>
@@ -36,5 +37,6 @@
 		  </b>
                      
     </form>
+        </div>
     </body>
 </html>

@@ -25,14 +25,13 @@
             </div>
           
             <div id="logo">
-             <img src="./publico/imagem/logo.png"></img>
-             
+             <img src="./publico/imagem/logo.png">
             </div>
 
             <div id="barramenu">
 
                 <a class="botaomenu" href="./">Página Inicial</a>
-                <a class="botaomenu"href="./cliente/listarClientes">Cadastro</a>
+                <a class="botaomenu"href="./cliente/listarClientes">Clientes</a>
                 <a class="botaomenu"href="./produto/listarProdutos">Produtos</a>
                 <a class="botaomenu"href="./endereco/listarEnderecos">Endereços</a>
                 <a class="botaomenu"href="./categoria/listarCategoria">Categorias</a>
@@ -45,7 +44,9 @@
 
 
         <main class="container">
+            <div class="meio">
             <?php require $viewFilePath; ?>
+        </div>
         </main>
 
         <div class="rodape">
