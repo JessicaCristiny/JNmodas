@@ -1,10 +1,10 @@
 <div class="meio">
 <form action="" method="POST">
-    Nome: <input type="text" name="nome" value = "<?=@$produto['nome']?>">
-    Descrição: <input type="text" name="descricao" value = "<?=@$produto['descricao']?>">
-    Valor: <input type="text" name="valor" value = "<?=@$produto['valor']?>">
-    Estoque minimo: <input type="text" name="estoqueMinimo" value = "<?=@$produto['estoqueMinimo']?>">
-    Estoque maximo: <input type="text" name="estoqueMaximo" value = "<?=@$produto['estoqueMaximo']?>">
+    Nome: <input type="text" name="nome" placeholder="Nome"value = "<?=@$produto['nome']?>">
+    Descrição: <input type="text" name="descricao" placeholder="Descrição"value = "<?=@$produto['descricao']?>">
+    Valor: <input type="text" name="valor" placeholder="00,00" value = "<?=@$produto['valor']?>">
+    Estoque minimo: <input type="text" name="estoqueMinimo" placeholder="x"value = "<?=@$produto['estoqueMinimo']?>">
+    Estoque maximo: <input type="text" name="estoqueMaximo" placeholder="y"value = "<?=@$produto['estoqueMaximo']?>">
     <select name="categoria">
 		<option value="default">Selecione uma categoria</option>
 		

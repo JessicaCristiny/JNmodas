@@ -4,11 +4,10 @@ require_once 'modelo/cupomModelo.php';
 
 function cadastro() {
     if (ehPost()) {
-        $idcupom = $_POST ["idcupom"];
         $nomecupom = $_POST ["nomecupom"];
         $desconto = $_POST ["desconto"];
         $dados = array();
-        $msg = adicionarCupom($idcupom, $nomecupom,$desconto);
+        $msg = adicionarCupom( $nomecupom,$desconto);
         redirecionar("cupom/listarCupom");
         exibir("cupom/formulario", $dados);
     } else {

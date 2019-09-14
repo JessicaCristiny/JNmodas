@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     </head>
     <body class="container">
-        <div id="menu">
+        <div class="menu">
             <div id="barrapesquisa">		
                 <div class="ui category search">
                     <div class="ui icon input">

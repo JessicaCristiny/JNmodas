@@ -1,6 +1,6 @@
 <?php
-function adicionarCupom ($idcupom, $nomecupom, $desconto) {
-    $sql = "INSERT INTO cupom (idcupom, nomecupom, desconto) VALUES ('$idcupom', '$nomecupom', '$desconto')";
+function adicionarCupom ( $nomecupom, $desconto) {
+    $sql = "INSERT INTO cupom ( nomecupom, desconto) VALUES ('$nomecupom', '$desconto')";
     $resultado = mysqli_query($cnx = conn(), $sql);
     if (!$resultado) {
         die('Erro ao cadastrar o cupom' . mysqli_error($cnx));
