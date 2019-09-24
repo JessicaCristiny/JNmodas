@@ -1,5 +1,4 @@
 <?php
-
 require_once "modelo/ProdutoModelo.php";
 
 function adicionar($idProduto) {

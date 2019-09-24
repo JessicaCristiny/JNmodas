@@ -37,3 +37,9 @@ function editarCliente($idcliente, $nomecompleto, $email, $cpf, $datanasci, $cel
     if(!$resultado) { die ('Erro ao alterar cliente' . mysqli_error($cnx));}
     return 'Cliente alterado com sucesso!';
 }
+function pegarUsuarioPorEmailSenha($email, $senha) {
+    $sql = "SELECT * FROM usuario WHERE email= '$email' and senha = '$senha'";
+    $resultado = mysqli_query(conn(), $sql);
+    $usuario = mysqli_fetch_assoc($resultado);
+    return $usuario;
+}
