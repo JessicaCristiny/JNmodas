@@ -1,5 +1,6 @@
 <?php
 require_once 'modelo/enderecoModelo.php';
+/** anon */
 function cadastroE($idcliente){
     if (ehPost ()){
         $cidade = strip_tags($_POST ["cidade"]);
@@ -68,19 +69,23 @@ function cadastroE($idcliente){
     }
     
 }
+/** anon */
 function listarEnderecos(){
     $dados = array ();
     $dados ["enderecos"] = pegarTodosEnderecos();
     exibir ("endereco/listarE", $dados);
 }
+/** anon */
 function ver($id){
     $dados["endereco"] = pegarEnderecoPorId($id);
     exibir("endereco/visualizar", $dados);
 }
+/** adm */
 function deletar($id){
     $msg = deletarEndereco($id);
     redirecionar("endereco/listarEnderecos");
 }
+/** adm */
 function editar($id) {
     if (ehPost ()){
         $cidade = $_POST ["cidade"];

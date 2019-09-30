@@ -1,6 +1,6 @@
 <?php 
 function adicionarCliente($nomecompleto, $email, $cpf, $datanasci, $cel, $senha){
-    $sql = "insert into cliente (nomecompleto, email, cpf, datanasci, cel, senha) values ('$nomecompleto','$email', '$cpf','$datanasci', '$cel', '$senha')";
+    $sql = "insert into cliente (nomecompleto, email, cpf, datanasci, cel, senha, papel) values ('$nomecompleto','$email', '$cpf','$datanasci', '$cel', '$senha', 'usuario')";
     $resultado = mysqli_query($cnx = conn(), $sql);
     if (!$resultado) { die('erro ao cadastrar cliente' .mysqli_error($cnx));}
     return 'cliente cadastrado com sucesso!';
@@ -37,8 +37,8 @@ function editarCliente($idcliente, $nomecompleto, $email, $cpf, $datanasci, $cel
     if(!$resultado) { die ('Erro ao alterar cliente' . mysqli_error($cnx));}
     return 'Cliente alterado com sucesso!';
 }
-function pegarUsuarioPorEmailSenha($email, $senha) {
-    $sql = "SELECT * FROM usuario WHERE email= '$email' and senha = '$senha'";
+function pegarClientePorEmailSenha($email, $senha) {
+    $sql = "SELECT * FROM cliente WHERE email= '$email' and senha = '$senha'";
     $resultado = mysqli_query(conn(), $sql);
     $usuario = mysqli_fetch_assoc($resultado);
     return $usuario;

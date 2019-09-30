@@ -1,6 +1,6 @@
 <?php
 require_once "modelo/buscaModelo.php";
-
+/** anon */
 function pesquisar (){
     if (ehPost()) {
         $buscar = $_POST["pesquisar"];

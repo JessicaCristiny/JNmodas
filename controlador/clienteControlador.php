@@ -1,6 +1,7 @@
 <?php
 require_once 'modelo/clienteModelo.php';
 require_once 'modelo/enderecoModelo.php';
+/** anon */
 function cadastro(){
     if (ehPost ()){
         $nome = strip_tags($_POST ["nome"]);
@@ -62,20 +63,24 @@ function cadastro(){
     }
     
 }
+/** anon */
 function listarClientes(){
     $dados = array ();
     $dados ["clientes"] = pegarTodosClientes();
     exibir ("cliente/listar", $dados);
 }
+/** anon */
 function ver($id){
     $dados["cliente"] = pegarClientePorId($id);
     $dados ["enderecos"] = pegarEnderecosPorUsuario($id);
     exibir("cliente/visualizar", $dados);
 }
+/** adm */
 function deletar($id){
     $msg = deletarCliente($id);
     redirecionar('cliente/listarClientes');
 }
+/** adm */
 function editar($id){
     if (ehPost ()){
         $nome = $_POST ["nome"];

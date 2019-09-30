@@ -9,6 +9,7 @@ cpf varchar(20) not null,
 datanasci varchar(20) not null,
 cel varchar(20) not null,
 senha varchar(20) not null,
+papel varchar(20) not null,
 primary key (idcliente)
 );
 
@@ -99,7 +100,7 @@ valortotal int (30) not null,
 primary key (idcarrinho)
 );
 
-
+insert into cliente (nomecompleto, email, cpf, datanasci, cel, senha, papel) values ('jessica ','jessicacristny.ballet@gmail.com', '505.970.698-24','21082002', '981067837', '21182002if', 'adm'); 
 
 
 

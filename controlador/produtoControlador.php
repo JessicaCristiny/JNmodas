@@ -8,6 +8,8 @@
     $vetor_dados ["valor"]=  "129,90";
     exibir("produto/visualizar", $vetor_dados);
 }
+
+/** adm */
 function adicionar(){
     if (ehPost ()){
         $nome = strip_tags($_POST ["nome"]);
@@ -59,20 +61,24 @@ function adicionar(){
     }
     
 }
+
+/** anon */
 function listarProdutos () {
     $dados = array();
     $dados ["produtos"] = pegarTodosProdutos();
     exibir ("produto/listar" , $dados);
 }
-
+/** anon */
 function ver($id){
     $dados ["produto"] = pegarProdutoPorId($id);
     exibir ("produto/visualizar", $dados);
 }
+/** adm */
 function deletar ($id) {
     $msg = deletarProduto($id);
     redirecionar("produto/listarProdutos");
 }
+/** adm */
 function editar ($id) {
         if (ehPost()) {
         $nome = $_POST ["nome"];

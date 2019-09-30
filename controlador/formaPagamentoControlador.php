@@ -1,5 +1,6 @@
 <?php
 require_once 'modelo/formaPagamentoModelo.php';
+/** amd */
 function formulario (){
     if (ehPost ()){
         $descricao = strip_tags($_POST ["descricao"]);
@@ -12,19 +13,23 @@ function formulario (){
         exibir("formaPagamento/formulario");
     }
 }
+/** anon */
 function listarFormaPagamento() {
     $dados = array();
     $dados["formaPagamentos"] = pegarTodasFormaPagamento();
     exibir("formaPagamento/listar", $dados);
 }
+/** anon */
 function ver($id){
     $dados["formaPagamento"] = pegarFormaPagamentoPorId($id);
     exibir("formaPagamento/visualizar", $dados);
 }
+/** adm */
 function deletar ($idFormadePagamento){
     $msg = deletarFormaPagamento($idFormadePagamento);
     redirecionar('formaPagamento/listarFormaPagamento');        
 }
+/** adm */
 function editar ($id){
     if(ehPost()){
         $descricao = $_POST["descricao"];

@@ -1,6 +1,6 @@
 <?php
 require_once "modelo/ProdutoModelo.php";
-
+/** anon */
 function adicionar($idProduto) {
     if (isset($_SESSION["carrinho"])) {
         $produtos = $_SESSION["carrinho"];
@@ -11,7 +11,7 @@ function adicionar($idProduto) {
     $_SESSION["carrinho"] = $produtos;
     redirecionar("carrinho/listar");
 }
-
+/** anon */
 function listar() {
     if (isset($_SESSION["carrinho"])) {
         $produtos = $_SESSION["carrinho"];
@@ -35,7 +35,7 @@ function listar() {
         redirecionar("produto/listarprodutos");
     }
 }
-
+/** anon */
 function remover() {
     unset($_SESSION["carrinho"]);
     session_destroy();

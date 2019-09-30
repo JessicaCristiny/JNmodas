@@ -1,7 +1,7 @@
 <?php
 
 require_once 'modelo/cupomModelo.php';
-
+/** adm */ 
 function cadastro() {
     if (ehPost()) {
         $nomecupom = $_POST ["nomecupom"];
@@ -14,22 +14,23 @@ function cadastro() {
         exibir("cupom/formulario");
     }
 }
+/** anon */
     function listarCupom() {
         $dados = array();
         $dados["cupom"] = pegarTodosCupom();
         exibir("cupom/listar", $dados);
     }
-
+/** anon */
     function ver($idcupom) {
         $dados ["cupom"] = pegarCupomPorId($idcupom);
         exibir("cupom/visualizar", $dados);
     }
-
+/** adm */
     function deletar($idcupom) {
         $msg = deletarCupom($idcupom);
         redirecionar("cupom/listarCupom");
     }
-
+/** adm */
     function editar($idcupom) {
         if (ehPost()) {
             $nomecupom = $_POST ["nomecupom"];
@@ -41,7 +42,7 @@ function cadastro() {
             exibir("cupom/formulario", $dados);
         }
     }
-
+/** adm */
     function adicionar($idcupom) {
         if (ehPost()) {
             $idcupom = strip_tags($_POST ["idcupom"]);
