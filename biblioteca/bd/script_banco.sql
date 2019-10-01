@@ -101,7 +101,7 @@ primary key (idcarrinho)
 );
 
 insert into cliente (nomecompleto, email, cpf, datanasci, cel, senha, papel) values ('jessica ','jessicacristny.ballet@gmail.com', '505.970.698-24','21082002', '981067837', '21182002if', 'adm'); 
-
+insert into cliente (nomecompleto, email, cpf, datanasci, cel, senha, papel) values ('nathalia', 'nath16silva@gmail.com', '469.968.169.69', '16092002', '997394497', '1609nathalia', 'adm');
 
 
 

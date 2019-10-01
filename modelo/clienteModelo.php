@@ -16,7 +16,6 @@ function pegarTodosClientes (){
     return $clientes;
             
 }
-
 function pegarClientePorId ($id){
     $sql = "select * from cliente where idcliente= $id";
     $resultado = mysqli_query(conn (), $sql);
