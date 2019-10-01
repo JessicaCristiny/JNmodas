@@ -29,15 +29,24 @@
             </div>
 
             <div id="barramenu">
-
+            
                 <a class="botaomenu" href="./">Página Inicial</a>
                 <a class="botaomenu"href="./cliente/listarClientes">Clientes</a>
-                <a class="botaomenu"href="./produto/listarProdutos">Produtos</a>
+                <?php if (acessoPegarPapelDoUsuario() == "adm"): ?>
+                    <a class="botaomenu"href="./produto/listarProdutos">Produtos</a>
+                <?php endif ?>
                 <a class="botaomenu"href="./endereco/listarEnderecos">Endereços</a>
-                <a class="botaomenu"href="./categoria/listarCategoria">Categorias</a>
-                <a class="botaomenu"href="./cupom/listarCupom">Cupom</a>
+                <?php if (acessoPegarPapelDoUsuario() == "adm"): ?>
+                    <a class="botaomenu"href="./categoria/listarCategoria">Categorias</a>
+                <?php endif ?>
+                <?php if (acessoPegarPapelDoUsuario() == "adm"): ?>
+                    <a class="botaomenu"href="./cupom/listarCupom">Cupom</a>
+                <?php endif ?>
+                <?php if (acessoPegarPapelDoUsuario() == "adm"): ?>
                 <a class="botaomenu"href="./formaPagamento/listarFormaPagamento">Forma de Pagamento</a>
+                <?php endif ?>
                 <a class="botaomenu"href="./carrinho/listar">Carrinho</a>
+                <a class="botaomenu" href="./login/logout">Sair</a>
 
             </div>    
         </div>

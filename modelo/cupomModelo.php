@@ -31,7 +31,7 @@ function deletarCupom($id) {
     return 'Cupom deletado com sucesso!';
 }
 function editarCupom($idcupom, $nomecupom, $desconto) {
-    $sql = "UPDATE cupom SET idcupom ='$idcupom', nomecupom ='$nomecupom' WHERE desconto='$desconto'";
+    $sql = "UPDATE cupom SET  nomecupom ='$nomecupom', desconto='$desconto' where idcupom ='$idcupom'";
     $resultado = mysqli_query($cnx = conn(), $sql);
     if (!$resultado) {
         die('Erro ao alterar cupom' . mysqli_error($cnx));
