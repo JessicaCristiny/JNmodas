@@ -27,5 +27,6 @@
                 <p><?=$quant?> Produtos</p>
             
             <button type="submit"><a href="./produto/listarProdutos">Comprar Mais produtos</a></button>   
+            <button type="submit"><a href="./pedido/finalizarPedido">Comprar</a></button>   
 </div>
 </div>
