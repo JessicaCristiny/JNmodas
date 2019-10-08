@@ -28,6 +28,8 @@
              <img src="./publico/imagem/logo.png">
             </div>
 
+            
+            
             <div id="barramenu">
             
                 <a class="botaomenu" href="./">Página Inicial</a>
@@ -46,7 +48,10 @@
                 <a class="botaomenu"href="./formaPagamento/listarFormaPagamento">Forma de Pagamento</a>
                 <?php endif ?>
                 <a class="botaomenu"href="./carrinho/listar">Carrinho</a>
-                <a class="botaomenu" href="./login/logout">Minha Conta</a>
+                
+                <a class="botaomenu" href="./cliente/ver/<?=acessoPegarUsuarioLogado();?>">Minha Conta</a>
+                 
+                
                 <a class="botaomenu" href="./login/logout">Sair</a>
 
             </div>    
