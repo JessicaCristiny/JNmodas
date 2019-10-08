@@ -9,8 +9,8 @@ function index() {
         $usuario = pegarClientePorEmailSenha($email, $senha);
         
         if (acessoLogar($usuario)) {
-            alert("bem vindo" . $login);
-            redirecionar("/");
+            
+            //redirecionar("/");
         } else {
             alert("usuario ou senha invalidos!");
         }

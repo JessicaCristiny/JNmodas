@@ -7,7 +7,7 @@ function acessoLogar($usuario) {
         $_SESSION["acesso"] = array( //cria a sessao acesso com os dados do usuario
             "email" => $usuario["email"], 
             "papel" => $usuario["papel"],
-            "id" => $usuario ["idcliente"]
+            "id" => $usuario["idcliente"]
         );
         return true; 
     }
@@ -33,6 +33,6 @@ function acessoPegarPapelDoUsuario() {
 
 function acessoPegarUsuarioLogado() {
     if (acessoUsuarioEstaLogado()) {
-        return $_SESSION["acesso"]["idcliente"];
+        return $_SESSION["acesso"]["id"];
     }   
 }
