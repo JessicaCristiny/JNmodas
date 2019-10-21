@@ -51,7 +51,6 @@
                 
                 <a class="botaomenu" href="./cliente/ver/<?=acessoPegarUsuarioLogado();?>">Minha Conta</a>
                  
-                
                 <a class="botaomenu" href="./login/logout">Sair</a>
 
             </div>    
