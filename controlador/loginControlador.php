@@ -10,9 +10,9 @@ function index() {
         
         if (acessoLogar($usuario)) {
             
-            //redirecionar("/");
+            redirecionar("/");
         } else {
-            alert("usuario ou senha invalidos!");
+            echo "usuario ou senha invalidos!";
         }
     }
     exibir("login/index");

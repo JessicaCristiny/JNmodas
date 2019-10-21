@@ -35,7 +35,7 @@
         </select>
 
         Nome do Cupom: <input type="text" name="nomecupom" value="<?= @$cupom['nomecupom'] ?>"><br>
-        <button type="submit"><a href="./pedido/finalizarPedido">Aplicar Desconto</a></button>   
+        <button type="submit">Aplicar Desconto</button>   
 
         <button type="submit" class="signupbtn">Finalizar Pedido</button>
 

@@ -39,7 +39,7 @@ function editarCupom($idcupom, $nomecupom, $desconto) {
     return 'Cupom alterado com sucesso!';
 }
 function pegarCupomPorNome ($nomecupom){
-    $sql = "select desconto from cupom where nomecupom = $nomecupom";
+    $sql = "select * from cupom where nomecupom like '$nomecupom'";
     $resultado = mysqli_query(conn(), $sql);
     $cupom = mysqli_fetch_assoc($resultado);
     return $cupom;

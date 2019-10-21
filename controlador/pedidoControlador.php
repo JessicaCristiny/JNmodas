@@ -19,9 +19,16 @@ function salvaPedido() {
 
 function finalizarPedido() {
     
+  
     
     if (ehPost()) {
         $nomecupom = $_POST["nomecupom"];   
+        echo "ahhhhhhhhhhh" . $nomecupom;
+        
+        
+        
+        $cupom = pegarCupomPorNome($nomecupom);
+        print_r($cupom);
     }
     
     $dados = array();
@@ -32,14 +39,23 @@ function finalizarPedido() {
 
     
     $vetorProdutos = array();
-    $desconto = pegarCupomPorNome($nomecupom);
+    
     $quant = 0;
     $subtotal = 0;
     foreach ($IDPRODUTOS as $IDPRODUTO) {
         $produto = pegarProdutoPorId($IDPRODUTO);
         $preco = $produto['valor'];
-        
-        $subtotal = $preco + $subtotal - $desconto;
+        if ($cupom == null){
+        $subtotal = $preco + $subtotal;
+        }else {
+            $desconto = $cupom['desconto'];
+            $desconto = $desconto/100;
+            $subtotal = $subtotal * $desconto;
+            $subtotal = $subtotal - $desconto;
+            $subtotal = $preco + $subtotal;
+            echo " olha o descpnto".$desconto;
+            //echo $subtotal;
+        }
         $quant = $quant + 1;
         $vetorProdutos[] = $produto;
     }
