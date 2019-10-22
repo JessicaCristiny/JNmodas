@@ -21,15 +21,7 @@ function finalizarPedido() {
     
   
     
-    if (ehPost()) {
-        $nomecupom = $_POST["nomecupom"];   
-        echo "ahhhhhhhhhhh" . $nomecupom;
-        
-        
-        
-        $cupom = pegarCupomPorNome($nomecupom);
-        print_r($cupom);
-    }
+   
     
     $dados = array();
     $dados["formaPagamentos"] = pegarTodasFormaPagamento();
@@ -45,21 +37,23 @@ function finalizarPedido() {
     foreach ($IDPRODUTOS as $IDPRODUTO) {
         $produto = pegarProdutoPorId($IDPRODUTO);
         $preco = $produto['valor'];
-        if ($cupom == null){
-        $subtotal = $preco + $subtotal;
-        }else {
-            $desconto = $cupom['desconto'];
-            $desconto = $desconto/100;
-            $subtotal = $subtotal * $desconto;
-            $subtotal = $subtotal - $desconto;
-            $subtotal = $preco + $subtotal;
-            echo " olha o descpnto".$desconto;
-            //echo $subtotal;
-        }
+        $subtotal = $subtotal + $preco;
         $quant = $quant + 1;
         $vetorProdutos[] = $produto;
     }
-
+    
+     if (ehPost()) {
+        $nomecupom = $_POST["nomecupom"];           
+        $cupom = pegarCupomPorNome($nomecupom);
+        print_r($cupom);
+        $desconto = $cupom['desconto'];
+        $x = ($desconto * $subtotal)/100;
+        $subtotal = $subtotal - $x;
+    }
+    
+    
+    
+    
     $dados['subtotal'] = $subtotal;
     $dados['quant'] = $quant;
 
