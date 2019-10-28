@@ -28,8 +28,7 @@
              <img src="./publico/imagem/logo.png">
             </div>
 
-            
-            
+
             <div id="barramenu">
             
                 <a class="botaomenu" href="./">Página Inicial</a>
