@@ -85,6 +85,7 @@ function editar ($id) {
         $descricao = $_POST ["descricao"];
         $valor = $_POST ["valor"];
         $categoria = $_POST ["categoria"];
+        
         editarCliente ($idProduto, $nome, $descricao, $valor, $categoria, $estoqueMinimo, $estoqueMaximo);
         redirecionar ("produto/listar");
         } else {

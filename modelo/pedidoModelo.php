@@ -1,8 +1,14 @@
 <?php
-function salvarPedidos ($descricao){
-    $sql = "INSERT INTO pedido (nome, descricao, valor, categoria, estoqueMinimo, estoqueMaximo) VALUES ('$nome', '$descricao', '$valor', '$categoria', '$estoqueMinimo', '$estoqueMaximo')";
+function salvarPedidos ($idPedido){
+    $sql = "INSERT INTO pedido (idPedido, idUsuario, idendereco) VALUES ('$idPedido', '$idUsusario', '$idendereco')";
         $cnx = conn();
         $resultado = mysqli_query($cnx, $sql);
         if (!$resultado) { die ('Erro ao cadastrar produto' . mysqli_error($cnx)); }
-        return 'Produto cadastrado com sucesso!';
-}
+ foreach ($produto as $pedido) {
+     $sql = "INSERT INTO pedido_produto (idproduto, idPedido, quantidade) VALUES ('$idproduto', '$idPedido', '$quantidade')";
+     
+ }
+ }
+          return 'Produto cadastrado com sucesso!';
+        
+

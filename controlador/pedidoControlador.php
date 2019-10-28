@@ -8,9 +8,9 @@ require_once "modelo/ProdutoModelo.php";
 
 function salvaPedido() {
     if (ehPost()) {
-        $descricao = strip_tags($_POST ["descricao"]);
+        $idPedido = strip_tags($_POST ["idPedido"]);
         $dados = array();
-        $msg = salvarProdutos($descricao);
+        $msg = salvarProdutos($idPedido);
         redirecionar("pedido/finalizarPedido");
     } else {
         
@@ -20,9 +20,6 @@ function salvaPedido() {
 function finalizarPedido() {
     
   
-    
-   
-    
     $dados = array();
     $dados["formaPagamentos"] = pegarTodasFormaPagamento();
     $dados ["enderecos"] = pegarTodosEnderecos();
@@ -51,12 +48,14 @@ function finalizarPedido() {
         $subtotal = $subtotal - $x;
     }
     
-    
-    
-    
     $dados['subtotal'] = $subtotal;
     $dados['quant'] = $quant;
 
     $dados ["visaoProdutos"] = $vetorProdutos;
     exibir("pedido/finalizarPedido", $dados);
+}
+function listarPedidos () {
+    $dados = array();
+    $dados ["pedidos"] = pegarTodosPedidos();
+    exibir ("pedido/listar" , $dados);
 }
