@@ -18,7 +18,12 @@ function adicionar(){
         $estoqueMinimo = strip_tags($_POST ["estoqueMinimo"]);
         $estoqueMaximo = strip_tags($_POST ["estoqueMaximo"]);
         $categoria = strip_tags($_POST["categoria"]);
-    
+        
+        
+        $destino = 'publico/imagem/' . $_FILES['imagem']['name'];
+        $arquivo_tmp = $_FILES['imagem']['tmp_name'];
+        move_uploaded_file( $arquivo_tmp, $destino );
+
     //nomeproduto
         if (strlen(trim($_POST['nome'])) == 0) {
             echo "Você deve inserir seu nome. <br>";
@@ -49,7 +54,7 @@ function adicionar(){
             echo 'Não é do tipo String.';
         }
       
-         $msg = adicionarProduto($nome, $descricao, $valor,  $categoria, $estoqueMinimo, $estoqueMaximo);
+         $msg = adicionarProduto($nome, $descricao, $valor,  $categoria, $estoqueMinimo, $estoqueMaximo, $imagem);
          echo $msg;
          redirecionar("produto/listarProdutos");
         
@@ -85,7 +90,10 @@ function editar ($id) {
         $descricao = $_POST ["descricao"];
         $valor = $_POST ["valor"];
         $categoria = $_POST ["categoria"];
-        
+        $destino = 'imagens/' . $_FILES['imagem']['name'];
+        $arquivo_tmp = $_FILES['imagem']['tmp_name'];
+        move_uploaded_file( $arquivo_tmp, $destino );
+
         editarCliente ($idProduto, $nome, $descricao, $valor, $categoria, $estoqueMinimo, $estoqueMaximo);
         redirecionar ("produto/listar");
         } else {

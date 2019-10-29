@@ -1,5 +1,5 @@
 <div class="meio">
-<form action="" method="POST">
+<form action="" method="POST" enctype="multipart/form-data">
     Nome: <input type="text" name="nome" value = "<?=@$produto['nome']?>">
     Descrição: <input type="text" name="descricao" value = "<?=@$produto['descricao']?>">
     Valor: <input type="text" name="valor" value = "<?=@$produto['valor']?>">
@@ -12,6 +12,7 @@
 			<option value="<?=$categoria["idcategoria"]?>"><?=$categoria["descricao"]?></option>
 		<?php endforeach;?>
 	</select><br>
+        <input type="file" name="imagem">
     <button type="submit"> Enviar </button>
     
 </form>

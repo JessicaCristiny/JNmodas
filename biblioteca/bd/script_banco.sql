@@ -21,6 +21,7 @@ create table produto (
         categoria int (8) not null,
         estoqueMinimo int(11) NOT NULL,
         estoqueMaximo int(11) NOT NULL,
+        imagem varchar(200) not null,
         primary key(idProduto),
         foreign key(categoria) references categoria(idcategoria)
 );
