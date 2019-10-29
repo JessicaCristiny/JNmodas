@@ -42,7 +42,7 @@ function finalizarPedido() {
      if (ehPost()) {
         $nomecupom = $_POST["nomecupom"];           
         $cupom = pegarCupomPorNome($nomecupom);
-        print_r($cupom);
+
         $desconto = $cupom['desconto'];
         $x = ($desconto * $subtotal)/100;
         $subtotal = $subtotal - $x;
