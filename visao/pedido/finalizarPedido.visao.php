@@ -37,7 +37,8 @@
         Nome do Cupom: <input type="text" name="nomecupom" value="<?= @$cupom['nomecupom'] ?>"><br>
         <button type="submit">Aplicar Desconto</button>   
 
-        <button type="submit" class="signupbtn">Finalizar Pedido</button>
+        <button type="submit" class="signupbtn">Finalizar Pedido</button> 
+        <a href="./pedido/listar" class="btn btn-primary">Listar Pedido</a>  
 
     </form>
 </div>

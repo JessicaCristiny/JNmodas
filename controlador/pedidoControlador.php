@@ -54,7 +54,7 @@ function finalizarPedido() {
     $dados ["visaoProdutos"] = $vetorProdutos;
     exibir("pedido/finalizarPedido", $dados);
 }
-function listarPedidos () {
+function listarpedidos () {
     $dados = array();
     $dados ["pedidos"] = pegarTodosPedidos();
     exibir ("pedido/listar" , $dados);
