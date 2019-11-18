@@ -54,7 +54,7 @@ function adicionar(){
             echo 'Não é do tipo String.';
         }
       
-         $msg = adicionarProduto($nome, $descricao, $valor,  $categoria, $estoqueMinimo, $estoqueMaximo, $imagem);
+         $msg = adicionarProduto($nome, $descricao, $valor,  $categoria, $estoqueMinimo, $estoqueMaximo, $destino);
          echo $msg;
          redirecionar("produto/listarProdutos");
         
