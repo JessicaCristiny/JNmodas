@@ -11,7 +11,8 @@ function salvaPedido() {
         $idPedido = strip_tags($_POST ["idPedido"]);
         $dados = array();
         $msg = salvarProdutos($idPedido);
-        redirecionar("pedido/finalizarPedido");
+        redirecionar("pedido/listarpedidos");
+        
     } else {
         
     }

@@ -74,10 +74,12 @@ create table pedido (
 idPedido int (11) auto_increment  not null,
 idUsuario int(11) not null,
 idendereco int(11) not null,
+idFormadePagamento int(11) not null,
 datacompra date not null,
 primary key (idPedido),
 foreign key(idusuario) references cliente (id) on delete cascade on update cascade,
-foreign key(idendereco) references endereco(idendereco) on delete cascade on update cascade
+foreign key(idendereco) references enderecos(idendereco) on delete cascade on update cascade,
+foreign key(idFormadePagamento) references formadepagamento(idFormadePagamento ) on delete cascade on update cascade
 );
 
 create table pedido_produto (
