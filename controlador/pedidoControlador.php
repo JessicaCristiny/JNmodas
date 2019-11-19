@@ -8,13 +8,24 @@ require_once "modelo/ProdutoModelo.php";
 
 function salvaPedido() {
     if (ehPost()) {
-        $idPedido = strip_tags($_POST ["idPedido"]);
-        $dados = array();
-        $msg = salvarProdutos($idPedido);
-        redirecionar("pedido/listarpedidos");
+       
+
+        $idEndereco = $_POST["endereco"];
+        $idFormaPagamento = $_POST["forma"];
+        $idUsuario = acessoPegarUsuarioLogado();
+        echo $idEndereco;
+        echo "<br>";
+        echo $idFormaPagamento;
+        echo "<br>";
+        echo $idUsuario;
+        
+        
+        $produtos = 
+        
+        $msg = salvarPedido($idEndereco, $idFormaPagamento, $idUsuario, $produtos);
         
     } else {
-        
+       
     }
 }
 

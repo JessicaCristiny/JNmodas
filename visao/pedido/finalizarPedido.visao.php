@@ -1,5 +1,5 @@
 <div class="meio">
-    <form action="" method="POST">
+    <form action="./pedido/salvaPedido" method="POST">
         <table border ="1">
             <div class="carrinho">
                 <tr>
@@ -16,9 +16,9 @@
 
                     </tr>
                 <?php endforeach; ?>
-                    
-                <h4>Subtotal: <?=$subtotal?></h4>
-                <p><?=$quant?> Produtos</p>
+
+                <h4>Subtotal: <?= $subtotal ?></h4>
+                <p><?= $quant ?> Produtos</p>
         </table>
         <select name="forma">
             <option value="default">Selecione uma Forma de Pagamento</option>
@@ -34,11 +34,16 @@
             <?php endforeach; ?>
         </select>
 
+
+
+        <button type="submit">Salvar Pedido</button>
+        <button type="submit"><a href="./pedido/listarpedidos" class="btn btn-primary">Listar Pedido</a></button>
+
+    </form>
+
+    <form method="POST" action="">
+
         Nome do Cupom: <input type="text" name="nomecupom" value="<?= @$cupom['nomecupom'] ?>"><br>
-        <button type="submit">Aplicar Desconto</button>   
-
-        <a href="./pedido/salvaPedido" class="btn btn-primary">Salvar Pedido</a>
-        <a href="./pedido/listarpedidos" class="btn btn-primary">Listar Pedido</a>  
-
+        <button type="submit">Aplicar Desconto</button>
     </form>
 </div>
