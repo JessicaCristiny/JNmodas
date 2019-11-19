@@ -8,7 +8,6 @@
     $vetor_dados ["valor"]=  "129,90";
     exibir("produto/visualizar", $vetor_dados);
 }
-
 /** adm */
 function adicionar(){
     if (ehPost ()){
