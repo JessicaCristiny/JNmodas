@@ -38,5 +38,3 @@ function editarProduto($idProduto, $nome, $descricao, $valor, $categoria) {
     return 'Produto alterado com sucesso!';
 }
 
-
-

@@ -30,8 +30,6 @@ function salvaPedido() {
 }
 
 function finalizarPedido() {
-    
-  
     $dados = array();
     $dados["formaPagamentos"] = pegarTodasFormaPagamento();
     $dados ["enderecos"] = pegarTodosEnderecos();

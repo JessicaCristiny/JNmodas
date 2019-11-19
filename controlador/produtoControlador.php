@@ -8,7 +8,6 @@
     $vetor_dados ["valor"]=  "129,90";
     exibir("produto/visualizar", $vetor_dados);
 }
-
 /** adm */
 function adicionar(){
     if (ehPost ()){
@@ -54,7 +53,7 @@ function adicionar(){
             echo 'Não é do tipo String.';
         }
       
-         $msg = adicionarProduto($nome, $descricao, $valor,  $categoria, $estoqueMinimo, $estoqueMaximo, $imagem);
+         $msg = adicionarProduto($nome, $descricao, $valor,  $categoria, $estoqueMinimo, $estoqueMaximo, $destino);
          echo $msg;
          redirecionar("produto/listarProdutos");
         
