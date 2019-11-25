@@ -4,20 +4,26 @@
 <table border ="1">
  <tr>
                    
-                    <th>PEDIDO</th>
-                    <th>ENDERECO</th>
-                    <th>FORMA DE PAGAMENTO</th>
+                    <th>Endereço</th>
+                    <th>Descrição</th>
+                    <th>idEndereco</th>
+                    <th>idPedido</th>
+                    <th>data da compra</th>
+                    <th>Ver Produtos comprados</th>
                    	
                 </tr>
          
            
             <?php foreach ($pedidos as $pedido): ?>
             <tr>
-                        <td><?=$pedido['idusuario']?></td>
-                        <td><?=$pedido['idendereco']?></td>
+                        <td><?=$pedido['rua']?></td>
                         <td><?=$pedido['descricao']?></td>
+                        <td><?=$pedido['idendereco']?></td>
+                        <td><?=$pedido['idPedido']?></td>
+                        <td><?=$pedido['datacompra']?></td>
+                        <td><a href="./pedido/ver/<?=$pedido['idPedido']?>">Ver</a></td>
     
-                              
+                             
             </tr>
             
             <?php endforeach; ?>

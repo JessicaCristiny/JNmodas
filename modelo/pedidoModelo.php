@@ -8,17 +8,17 @@ function salvarPedido ($idendereco, $idFormadePagamento, $idUsuario, $produtos){
         $idPedido = mysqli_insert_id($cnx);
         
         foreach ($produtos as $produto) {
-            $sql = "INSERT INTO pedido_produto (idproduto, idPedido, quantidade) VALUES ('$produto['']', '$idPedido', '$quantidade')";
+            $sql = "INSERT INTO pedido_produto (idProduto, idPedido, quantidade) VALUES ('$produto', '$idPedido', '0')";
             $cnx= conn();
-            $resultado = mysql_query($cnx, $sql);
+            $resultado = mysqli_query($cnx, $sql);
+            if (!$resultado) { die ('Erro ao cadastrar produto' . mysqli_error($cnx)); }
+       
         }
     return 'Produto cadastrado com sucesso!';
  }
 
 function pegarTodosPedidos(){
-    $sql = "SELECT * FROM pedido";
-    $sql = "SELECT * FROM pedido";
-    $sql = "select enderecos.rua, formadepagamento.descricao, pedido.idendereco, pedido.idPedido
+    $sql = "select enderecos.rua, formadepagamento.descricao, pedido.idendereco, pedido.idPedido, datacompra
     from enderecos
     inner join pedido
     ON enderecos.idendereco = pedido.idendereco
@@ -33,3 +33,12 @@ function pegarTodosPedidos(){
 return $pedidos;
 }
      
+function pegarProdutosDoPedido ($idPedido){
+    $sql= "select * from pedido_produto";
+     $resultado = mysqli_query(conn(), $sql);
+    $pedidos = array();
+    while ($linha = mysqli_fetch_assoc($resultado)){
+    $pedidos [] = $linha;
+    }
+return $pedidos;
+}

@@ -20,12 +20,15 @@ function salvaPedido() {
         echo $idUsuario;
         
         
-        $produtos = 
+        
+        $produtos = array();
+        $produtos = $_SESSION["carrinho"] ;
+        var_dump($produtos);
         
         $msg = salvarPedido($idEndereco, $idFormaPagamento, $idUsuario, $produtos);
-        
+        redirecionar("pedido/listarpedidos");
     } else {
-       
+       echo "deu erro, tente novamente";
     }
 }
 
@@ -68,4 +71,9 @@ function listarpedidos () {
     $dados = array();
     $dados ["pedidos"] = pegarTodosPedidos();
     exibir ("pedido/listar" , $dados);
+}
+function ver ($idPedido){
+    $dados ["produtos"] = pegarProdutosDoPedido ($idPedido);
+    var_dump($dados);
+    exibir("pedido/ver", $dados);
 }
