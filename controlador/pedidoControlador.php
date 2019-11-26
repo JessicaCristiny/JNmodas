@@ -13,11 +13,7 @@ function salvaPedido() {
         $idEndereco = $_POST["endereco"];
         $idFormaPagamento = $_POST["forma"];
         $idUsuario = acessoPegarUsuarioLogado();
-        echo $idEndereco;
-        echo "<br>";
-        echo $idFormaPagamento;
-        echo "<br>";
-        echo $idUsuario;
+       
         
         
         
@@ -74,6 +70,5 @@ function listarpedidos () {
 }
 function ver ($idPedido){
     $dados ["produtos"] = pegarProdutosDoPedido ($idPedido);
-    var_dump($dados);
     exibir("pedido/ver", $dados);
 }

@@ -34,7 +34,9 @@ return $pedidos;
 }
      
 function pegarProdutosDoPedido ($idPedido){
-    $sql= "select * from pedido_produto";
+    $sql= "select pedido_produto.idproduto, produto.nome, produto.descricao, produto.valor, produto.categoria from pedido_produto 
+             inner join produto 
+             on pedido_produto.idproduto = produto.idproduto";
      $resultado = mysqli_query(conn(), $sql);
     $pedidos = array();
     while ($linha = mysqli_fetch_assoc($resultado)){
