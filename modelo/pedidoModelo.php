@@ -1,6 +1,6 @@
 <?php
-function salvarPedido ($idendereco, $idFormadePagamento, $idUsuario, $produtos){
-    $sql = "INSERT INTO pedido (idendereco, idFormadePagamento, idUsuario, datacompra) VALUES ('$idendereco', '$idFormadePagamento', '$idUsuario', NOW())";
+function salvarPedido ($idendereco, $idFormadePagamento, $idUsuario, $subtotal, $produtos){
+    $sql = "INSERT INTO pedido (idendereco, idFormadePagamento, idUsuario, total, datacompra) VALUES ('$idendereco', '$idFormadePagamento', '$idUsuario', '$subtotal', NOW())";
         $cnx = conn();
         $resultado = mysqli_query($cnx, $sql);
         if (!$resultado) { die ('Erro ao cadastrar produto' . mysqli_error($cnx)); }
@@ -34,9 +34,12 @@ return $pedidos;
 }
      
 function pegarProdutosDoPedido ($idPedido){
-    $sql= "select pedido_produto.idproduto, produto.nome, produto.descricao, produto.valor, produto.categoria from pedido_produto 
+    $sql= "select pedido_produto.idproduto, produto.nome, produto.descricaoPRODUTO, produto.valor, produto.categoria, categoria.idcategoria, categoria.descricao from pedido_produto 
              inner join produto 
-             on pedido_produto.idproduto = produto.idproduto";
+             on pedido_produto.idproduto = produto.idproduto
+             inner join categoria 
+             on produto.categoria = categoria.idcategoria
+             where idPedido = '$idPedido'";
      $resultado = mysqli_query(conn(), $sql);
     $pedidos = array();
     while ($linha = mysqli_fetch_assoc($resultado)){

@@ -9,19 +9,28 @@ require_once "modelo/ProdutoModelo.php";
 function salvaPedido() {
     if (ehPost()) {
        
-
+$IDPRODUTOS = $_SESSION["carrinho"];
         $idEndereco = $_POST["endereco"];
         $idFormaPagamento = $_POST["forma"];
         $idUsuario = acessoPegarUsuarioLogado();
+        $subtotal = 0;
+        foreach ($IDPRODUTOS as $IDPRODUTO) {
+        $produto = pegarProdutoPorId($IDPRODUTO);
+        $subtotal +=  $produto['valor'];
+        
+       
+    }
+    
        
         
         
         
         $produtos = array();
         $produtos = $_SESSION["carrinho"] ;
-        var_dump($produtos);
         
-        $msg = salvarPedido($idEndereco, $idFormaPagamento, $idUsuario, $produtos);
+        
+
+        $msg = salvarPedido($idEndereco, $idFormaPagamento, $idUsuario, $subtotal, $produtos);
         redirecionar("pedido/listarpedidos");
     } else {
        echo "deu erro, tente novamente";

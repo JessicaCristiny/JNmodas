@@ -1,11 +1,21 @@
 <?php
+require_once "modelo/administradorModelo.php";
+function index () {
+    exibir("administrador/formdata");
+}
+
 function pedido_intervalo_data() {
-    if (ehPost()) {
+    if (ehPost()) {        
         $data1 = $_POST["data_1"];
         $data2 = $_POST["data_2"];
-        $msg = intervalos_data ($data1, $data2);
-        redirecionar("administrador/listarINTERVALO");
+        $dados ["datas"] = intervalos_data($data1, $data2);
+        exibir("administrador/listarINTERVALO", $dados);
+        
     } else {
-       echo "deu erro, tente novamente";
+        exibir("administrador/formdata");
     }
 }
+
+
+
+?>

@@ -48,6 +48,8 @@
                 <?php endif ?>
                 <a class="botaomenu"href="./carrinho/listar">Carrinho</a>
                 
+                <a class="botaomenu"href="./administrador/">Administrador</a>
+                
                 <a class="botaomenu" href="./cliente/ver/<?=acessoPegarUsuarioLogado();?>">Minha Conta</a>
                  
                 <a class="botaomenu" href="./login/logout">Sair</a>

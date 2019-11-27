@@ -1,13 +1,13 @@
 <?php
 
 function intervalos_data ($data1, $data2){
-    $sql ="select datacompra from pedido where datacompra >='$data1' and datacompra <='$data2'";
+    $sql ="select * from pedido where datacompra between '$data1' and '$data2'";
     $resultado = mysqli_query(conn(), $sql);
-    $pedidos = array();
+    $dados = array();
     while ($linha = mysqli_fetch_assoc($resultado)){
-    $pedidos [] = $linha;
+    $dados [] = $linha;
     }
-return $pedidos;
+return $dados;
 }
 function pedido_cidade(){
     

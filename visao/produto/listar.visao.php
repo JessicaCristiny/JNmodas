@@ -16,7 +16,7 @@
             <?php foreach ($produtos as $produto): ?>
             <tr>
                 <td><?=$produto['nome']?></td>
-                <td><?=$produto['descricao']?></td>
+                <td><?=$produto['descricaoPRODUTO']?></td>
                 <td><?=$produto['valor']?></td>
                 <td><a href ="./produto/ver/<?=$produto['idProduto']?>">Ver</a></td>
                 <td><a href="./produto/deletar/<?=$produto['idProduto']?>">Deletar</a></td>

@@ -3,9 +3,9 @@
 <?php foreach ($produtos as $produto): ?>
 <p>IdProduto: <?=$produto ['idproduto']?></p>
 <p>Nome: <?=$produto['nome']?></p>
-<p>Descrição: <?=$produto['descricao']?></p>
+<p>Descrição: <?=$produto['descricaoPRODUTO']?></p>
 <p>Valor: <?=$produto['valor']?></p>
-<p>Categoria: <?=$produto['categoria']?></p>
+<p>Categoria: <?=$produto['descricao']?></p>
 
 <?php endforeach; ?>
 </div>

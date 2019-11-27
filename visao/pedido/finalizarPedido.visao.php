@@ -11,7 +11,7 @@
                 <?php foreach ($visaoProdutos as $visaoProduto): ?>
                     <tr>
                         <td><?= $visaoProduto['nome'] ?></td>
-                        <td><?= $visaoProduto['descricao'] ?></td>
+                        <td><?= $visaoProduto['descricaoPRODUTO'] ?></td>
                         <td><?= $visaoProduto['valor'] ?></td>
 
                     </tr>

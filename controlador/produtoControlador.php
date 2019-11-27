@@ -89,12 +89,14 @@ function editar ($id) {
         $descricao = $_POST ["descricao"];
         $valor = $_POST ["valor"];
         $categoria = $_POST ["categoria"];
+        $estoqueMinimo = $_POST ["estoqueMinimo"];
+        $estoqueMaximo = $_POST ["estoqueMaximo"];
         $destino = 'imagens/' . $_FILES['imagem']['name'];
         $arquivo_tmp = $_FILES['imagem']['tmp_name'];
         move_uploaded_file( $arquivo_tmp, $destino );
 
-        editarCliente ($idProduto, $nome, $descricao, $valor, $categoria, $estoqueMinimo, $estoqueMaximo);
-        redirecionar ("produto/listar");
+        editarPRODUTO ($id, $nome, $descricao, $valor, $categoria, $estoqueMinimo, $estoqueMaximo);
+        redirecionar ("produto/listarProdutos");
         } else {
             $dados ["produto"] = pegarProdutoPorId($id);
             $dados ["categorias"] = pegarTodasCategoria();
