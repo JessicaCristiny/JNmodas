@@ -17,5 +17,9 @@ function pedido_intervalo_data() {
 }
 
 
+function listaProdutosPorQuant() {
+    $dados = array();
+    $dados["administrador"] = pegarProdutosPorQuant();
+    exibir("administrador/listarquantestoque", $dados);
+}
 
-?>
