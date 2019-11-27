@@ -23,7 +23,8 @@ body {
 
 #logo img{
     width:100%;
-    margin-top:34%;
+    margin-top:33%;
+   margin-right: 7%;
 }
 #barrapesquisa{
     float:right;
@@ -67,7 +68,7 @@ body {
     text-align: center;
     border: 2px solid #d43c61;
     margin-left:  30%;
-    margin-right: 80%;
+    margin-right: 40%;
     
 
 }
@@ -79,4 +80,14 @@ body {
 .meio{
     padding: 2%;
 
+}
+
+
+.img-produto {
+    width: 300px;
+    margin-left: 15%;
+    margin-right: 15%;
+    
+    
+    
 }

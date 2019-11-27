@@ -3,12 +3,12 @@
 <form method="POST" action="">
 
 
-    <label for="login">email:</label>
+    <label for="login">E-mail:</label>
     <input id="login" class="form-control" type="text" name="email">
 
-    <label for="passwd">senha:</label>
+    <label for="passwd">Senha:</label>
     <input id="passwd" class="form-control" type="password" name="senha">
 
-    <button type="submit" class="btn btn-primary">vai login</button>
+    <button type="submit" class="btn btn-primary">Entrar</button>
 
 </form>

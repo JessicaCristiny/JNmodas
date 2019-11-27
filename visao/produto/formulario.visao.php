@@ -5,11 +5,12 @@
     Valor: <input type="text" name="valor" placeholder="00,00" value = "<?=@$produto['valor']?>">
     Estoque minimo: <input type="text" name="estoqueMinimo" placeholder="x"value = "<?=@$produto['estoqueMinimo']?>">
     Estoque maximo: <input type="text" name="estoqueMaximo" placeholder="y"value = "<?=@$produto['estoqueMaximo']?>">
+   
     <select name="categoria">
 		<option value="default">Selecione uma categoria</option>
 		
 		<?php foreach ($categorias as $categoria):?>
-			<option value="<?=$categoria["idcategoria"]?>"><?=$categoria["descricao"]?></option>
+			<option value="<?=$categoria["categoria"]?>"><?=$categoria["descricao"]?></option>
 		<?php endforeach;?>
 	</select><br>
         <input type="file" name="imagem">
