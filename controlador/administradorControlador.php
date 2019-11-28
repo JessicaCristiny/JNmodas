@@ -19,10 +19,13 @@ function pedido_por_cidades (){
         $dados ["cidades"] = pedido_cidade();
         exibir("administrador/listarCIDADES", $dados);
 }
-
-function listaProdutosPorQuant() {
+function pedido_por_categoria (){
+    $dados ["categorias"] = pedido_categoria ();
+    exibir ("administrador/listarCATEGORIAS", $dados);
+}
+function pedido_produtos_por_quant() {
     $dados = array();
-    $dados["administrador"] = pegarProdutosPorQuant();
+    $dados["quantidades"] = pegar_produtos_por_quant();
     exibir("administrador/listarquantestoque", $dados);
 }
 

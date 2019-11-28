@@ -22,8 +22,25 @@ function pedido_cidade(){
 return $dados;
     
 }
-function pegarProdutosPorQuant() {
-    $sql = "select * from produto";
+function pedido_categoria (){
+    $sql = "select pedido.idPedido, pedido.total, categoria.descricao from pedido
+        inner join pedido_produto
+        on pedido.idPedido = pedido_produto.idPedido
+        inner join produto
+        on pedido_produto.idproduto = produto.idproduto
+        inner join categoria
+        on produto.categoria =  categoria.idcategoria
+        order by categoria.descricao";
+    $resultado = mysqli_query(conn(), $sql);
+    $dados = array();
+    while ($linha = mysqli_fetch_assoc($resultado)){
+    $dados [] = $linha;
+    }
+return $dados;
+    
+}
+function pegar_produtos_por_quant() {
+    $sql = "select nome, estoqueMaximo from produto";
     $resultado = mysqli_query(conn(), $sql);
     $produto = array();
     while ($linha = mysqli_fetch_assoc($resultado)) {
