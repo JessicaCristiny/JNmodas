@@ -1,6 +1,7 @@
+<div class="meio">
 
-<h1>Lista por Categorias</h1>
 <table border = "1">
+    <h1>Lista por Categorias</h1>
             <thead>
                 <tr>
                     <th>idPedido</th>
@@ -16,3 +17,5 @@
            
             </tr>
 <?php endforeach; ?>
+</table>
+</div>

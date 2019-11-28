@@ -47,9 +47,10 @@
                 <a class="botaomenu"href="./formaPagamento/listarFormaPagamento">Forma de Pagamento</a>
                 <?php endif ?>
                 <a class="botaomenu"href="./carrinho/listar">Carrinho</a>
-                
+                <?php if (acessoPegarPapelDoUsuario() == "adm"): ?>
                 <a class="botaomenu"href="./administrador/">Administrador</a>
-                
+                <?php endif ?>
+                <a class="botaomenu"href="./pedido/listarpedidos">Meus Pedidos</a>
                 <a class="botaomenu" href="./cliente/ver/<?=acessoPegarUsuarioLogado();?>">Minha Conta</a>
                  
                 <a class="botaomenu" href="./login/logout">Sair</a>
@@ -61,7 +62,7 @@
         <main class="container">
             <div class="meio">
             <?php require $viewFilePath; ?>
-        </div>
+            </div>
         </main>
 
         <div class="rodape">

@@ -3,17 +3,15 @@
 <table border = "1">
             <thead>
                 <tr>
-                    <th>idPedido</th>
-                    <th>Cidade</th>
-                    <th>Total</th>
+                    <th>Produto</th>
+                    <th>Quantidade no estoque</th>
                 </tr>
             </thead>
 <?php foreach ($quantidades as $quantidade): ?>
             <tr>
-                <td><?=$quantidade["idPedido"]?></td>
-                <td><?=$quantidade["cidade"]?></td>
-                <td><?=$quantidade["total"]?></td>
+                <td><?=$quantidade["nome"]?></td>
+                <td><?=$quantidade["estoqueMaximo"]?></td>
            
             </tr>
 <?php endforeach; ?>
-
+</TABLE>

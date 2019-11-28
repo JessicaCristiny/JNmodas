@@ -39,12 +39,32 @@ function pedido_categoria (){
 return $dados;
     
 }
+function fatoramento_mensal ($mes){
+    $sql = "select datacompra, total from pedido where date_format(datacompra, '%m') = '$mes'";
+    $resultado = mysqli_query(conn(), $sql);
+    $dados = array();
+    while ($linha = mysqli_fetch_assoc($resultado)){
+    $dados [] = $linha;
+    }
+return $dados;
+    
+}
+function fatoramento_anual($ano){
+    $sql = "select datacompra, total from pedido where date_format(datacompra, '%Y') = '$ano'";
+    $resultado = mysqli_query(conn(), $sql);
+    $dados = array();
+    while ($linha = mysqli_fetch_assoc($resultado)){
+    $dados [] = $linha;
+    }
+return $dados;
+    
+}
 function pegar_produtos_por_quant() {
     $sql = "select nome, estoqueMaximo from produto";
     $resultado = mysqli_query(conn(), $sql);
-    $produto = array();
+    $dados = array();
     while ($linha = mysqli_fetch_assoc($resultado)) {
-        $produto[] = $linha;
+        $dados[] = $linha;
     }
-    return $produto;
+    return $dados;
 }

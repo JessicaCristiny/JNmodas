@@ -30,5 +30,6 @@
             <?php if (acessoPegarPapelDoUsuario()== 'Administrador') {?>
             <a href= ".pedido/pegarPedido" class ="btn btn-primary"> Novo Pedido</a>
             <?php } ?>
+</table>
 
 </div>

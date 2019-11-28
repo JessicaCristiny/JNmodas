@@ -1,6 +1,7 @@
 
-<h1>Lista por Cidades</h1>
+<div class="meio">
 <table border = "1">
+    <h1>Lista por Cidades</h1>
             <thead>
                 <tr>
                     <th>idPedido</th>
@@ -16,3 +17,5 @@
            
             </tr>
 <?php endforeach; ?>
+</table>
+</div>
