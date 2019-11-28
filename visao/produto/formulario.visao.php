@@ -10,7 +10,7 @@
 		<option value="default">Selecione uma categoria</option>
 		
 		<?php foreach ($categorias as $categoria):?>
-			<option value="<?=$categoria["categoria"]?>"><?=$categoria["descricao"]?></option>
+			<option value="<?=$categoria["idcategoria"]?>"><?=$categoria["descricao"]?></option>
 		<?php endforeach;?>
 	</select><br>
         <input type="file" name="imagem">

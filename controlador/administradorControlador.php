@@ -1,7 +1,7 @@
 <?php
 require_once "modelo/administradorModelo.php";
 function index () {
-    exibir("administrador/formdata");
+    exibir("administrador/relatorios");
 }
 
 function pedido_intervalo_data() {
@@ -15,7 +15,10 @@ function pedido_intervalo_data() {
         exibir("administrador/formdata");
     }
 }
-
+function pedido_por_cidades (){
+        $dados ["cidades"] = pedido_cidade();
+        exibir("administrador/listarCIDADES", $dados);
+}
 
 function listaProdutosPorQuant() {
     $dados = array();

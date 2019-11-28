@@ -1,7 +1,6 @@
 <?php
-function adicionarEndereco($idcliente, $cidade, $bairro, $rua, $cep, $num){
-    $sql = "insert into enderecos (idcliente, cidade, bairro, rua, cep, num ) values ('$idcliente', '$cidade','$bairro','$rua', '$cep', '$num')";
-    echo $sql;
+function adicionarEndereco( $idcliente, $cidade, $bairro, $rua, $cep, $num){
+    $sql = "insert into enderecos ( idcliente, cidade, bairro, rua, cep, num ) values ('$idcliente', '$cidade','$bairro','$rua', '$cep', '$num')";
     $resultado = mysqli_query($cnx = conn(), $sql);
     if (!$resultado) { die('erro ao cadastrar o endereço' .mysqli_error($cnx));}
     return 'endereço cadastrado com sucesso!';
